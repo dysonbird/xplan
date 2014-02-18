@@ -1,0 +1,97 @@
+[INFO ][2014-02-18 10:34:00] testing log4j
+[INFO ][2014-02-18 10:36:16] testing log4j
+[INFO ][2014-02-18 10:36:31] testing log4j
+[INFO ][2014-02-18 10:37:49] testing log4j
+[INFO ][2014-02-18 10:38:40] testing log4j
+[ERROR][2014-02-18 10:38:40] testing log4j
+[INFO ][2014-02-18 10:38:54] testing log4j
+[ERROR][2014-02-18 10:38:54] testing log4j
+[INFO ][2014-02-18 10:39:22] testing log4j
+[ERROR][2014-02-18 10:39:22] testing log4j
+[INFO ][2014-02-18 10:44:52] testing log4j
+[ERROR][2014-02-18 10:44:52] testing log4j
+[INFO ][2014-02-18 10:54:35] testing log4j
+[ERROR][2014-02-18 10:54:35] testing log4j
+[INFO ][2014-02-18 11:27:01] 初始化spring容器
+[INFO ][2014-02-18 11:27:01] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@798fd984: display name [org.springframework.context.support.ClassPathXmlApplicationContext@798fd984]; startup date [Tue Feb 18 11:27:01 CST 2014]; root of context hierarchy
+[INFO ][2014-02-18 11:27:01] Loading XML bean definitions from class path resource [bean.xml]
+[INFO ][2014-02-18 11:27:01] Loading XML bean definitions from class path resource [conf/beanConf.xml]
+[INFO ][2014-02-18 11:28:27] 初始化spring容器
+[INFO ][2014-02-18 11:28:27] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@211d0a4f: display name [org.springframework.context.support.ClassPathXmlApplicationContext@211d0a4f]; startup date [Tue Feb 18 11:28:27 CST 2014]; root of context hierarchy
+[INFO ][2014-02-18 11:28:27] Loading XML bean definitions from class path resource [bean.xml]
+[INFO ][2014-02-18 11:28:27] Loading XML bean definitions from class path resource [conf/beanConf.xml]
+[INFO ][2014-02-18 11:29:21] 初始化spring容器
+[INFO ][2014-02-18 11:29:21] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@798fd984: display name [org.springframework.context.support.ClassPathXmlApplicationContext@798fd984]; startup date [Tue Feb 18 11:29:21 CST 2014]; root of context hierarchy
+[INFO ][2014-02-18 11:29:21] Loading XML bean definitions from class path resource [bean.xml]
+[INFO ][2014-02-18 11:29:21] Loading XML bean definitions from class path resource [com/x/server/conf/beanConf.xml]
+[INFO ][2014-02-18 11:31:31] 初始化spring容器
+[INFO ][2014-02-18 11:31:31] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@211d0a4f: display name [org.springframework.context.support.ClassPathXmlApplicationContext@211d0a4f]; startup date [Tue Feb 18 11:31:31 CST 2014]; root of context hierarchy
+[INFO ][2014-02-18 11:31:31] Loading XML bean definitions from class path resource [bean.xml]
+[INFO ][2014-02-18 11:31:31] Loading XML bean definitions from class path resource [conf/beanConf.xml]
+[INFO ][2014-02-18 11:33:36] 初始化spring容器
+[INFO ][2014-02-18 11:33:36] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@211d0a4f: display name [org.springframework.context.support.ClassPathXmlApplicationContext@211d0a4f]; startup date [Tue Feb 18 11:33:36 CST 2014]; root of context hierarchy
+[INFO ][2014-02-18 11:33:36] Loading XML bean definitions from class path resource [bean.xml]
+[INFO ][2014-02-18 11:33:36] Loading XML bean definitions from class path resource [conf/beanConf.xml]
+[INFO ][2014-02-18 11:35:29] 初始化spring容器
+[INFO ][2014-02-18 11:35:29] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@798fd984: display name [org.springframework.context.support.ClassPathXmlApplicationContext@798fd984]; startup date [Tue Feb 18 11:35:29 CST 2014]; root of context hierarchy
+[INFO ][2014-02-18 11:35:29] Loading XML bean definitions from class path resource [bean.xml]
+[INFO ][2014-02-18 11:35:29] Loading XML bean definitions from class path resource [conf/beanConf.xml]
+[INFO ][2014-02-18 11:42:47] 初始化spring容器
+[INFO ][2014-02-18 11:42:47] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@798fd984: display name [org.springframework.context.support.ClassPathXmlApplicationContext@798fd984]; startup date [Tue Feb 18 11:42:47 CST 2014]; root of context hierarchy
+[INFO ][2014-02-18 11:42:47] Loading XML bean definitions from class path resource [bean.xml]
+[INFO ][2014-02-18 11:42:47] Loading XML bean definitions from class path resource [com/x/server/conf/beanConf.xml]
+[INFO ][2014-02-18 11:42:48] Bean factory for application context [org.springframework.context.support.ClassPathXmlApplicationContext@798fd984]: org.springframework.beans.factory.support.DefaultListableBeanFactory@7b36a43c
+[INFO ][2014-02-18 11:42:48] Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@7b36a43c: defining beans [XDbServer]; root of factory hierarchy
+[INFO ][2014-02-18 11:42:48] 服务器已经已经启动:Tue Feb 18 11:42:48 CST 2014
+[INFO ][2014-02-18 11:46:05] 初始化spring容器
+[INFO ][2014-02-18 11:46:05] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@798fd984: display name [org.springframework.context.support.ClassPathXmlApplicationContext@798fd984]; startup date [Tue Feb 18 11:46:05 CST 2014]; root of context hierarchy
+[INFO ][2014-02-18 11:46:05] Loading XML bean definitions from class path resource [bean.xml]
+[INFO ][2014-02-18 11:46:05] Loading XML bean definitions from class path resource [com/x/server/conf/beanConf.xml]
+[INFO ][2014-02-18 11:46:05] Bean factory for application context [org.springframework.context.support.ClassPathXmlApplicationContext@798fd984]: org.springframework.beans.factory.support.DefaultListableBeanFactory@736921fd
+[INFO ][2014-02-18 11:46:05] Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@736921fd: defining beans [XDbServer]; root of factory hierarchy
+[INFO ][2014-02-18 11:46:05] 服务器已经已经启动:Tue Feb 18 11:46:05 CST 2014
+[INFO ][2014-02-18 11:46:10] 服务器已经安全关闭:Tue Feb 18 11:46:10 CST 2014
+[INFO ][2014-02-18 15:49:24] 初始化spring容器
+[INFO ][2014-02-18 15:49:24] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@798fd984: display name [org.springframework.context.support.ClassPathXmlApplicationContext@798fd984]; startup date [Tue Feb 18 15:49:24 CST 2014]; root of context hierarchy
+[INFO ][2014-02-18 15:49:24] Loading XML bean definitions from class path resource [bean.xml]
+[INFO ][2014-02-18 15:49:24] Loading XML bean definitions from class path resource [com/x/server/conf/beanConf.xml]
+[INFO ][2014-02-18 15:49:24] Bean factory for application context [org.springframework.context.support.ClassPathXmlApplicationContext@798fd984]: org.springframework.beans.factory.support.DefaultListableBeanFactory@42472d48
+[INFO ][2014-02-18 15:49:24] Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@42472d48: defining beans [cache,XDbServer]; root of factory hierarchy
+[WARN ][2014-02-18 15:49:24] XMemcachedClient use Text protocol
+[WARN ][2014-02-18 15:49:24] XMemcachedClient in failure mode.
+[INFO ][2014-02-18 15:49:24] Creating 4 reactors...
+[WARN ][2014-02-18 15:49:24] The Controller started at localhost/127.0.0.1:0 ...
+[WARN ][2014-02-18 15:49:24] Add a session: 10.6.6.92:11211
+[WARN ][2014-02-18 15:49:24] Add a session: 10.6.6.92:11211
+[WARN ][2014-02-18 15:49:24] Add a session: 10.6.6.92:11211
+[WARN ][2014-02-18 15:49:24] Enable merge get commands
+[WARN ][2014-02-18 15:49:24] change mergeFactor from 50 to 50
+[INFO ][2014-02-18 15:49:24] 服务器已经已经启动:Tue Feb 18 15:49:24 CST 2014
+[INFO ][2014-02-18 16:21:42] 初始化spring容器
+[INFO ][2014-02-18 16:21:42] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5311a775: display name [org.springframework.context.support.ClassPathXmlApplicationContext@5311a775]; startup date [Tue Feb 18 16:21:42 CST 2014]; root of context hierarchy
+[INFO ][2014-02-18 16:21:42] Loading XML bean definitions from class path resource [bean.xml]
+[INFO ][2014-02-18 16:21:42] Loading XML bean definitions from class path resource [com/x/server/conf/beanConf.xml]
+[INFO ][2014-02-18 16:21:42] Bean factory for application context [org.springframework.context.support.ClassPathXmlApplicationContext@5311a775]: org.springframework.beans.factory.support.DefaultListableBeanFactory@3598cb3d
+[INFO ][2014-02-18 16:21:42] Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@3598cb3d: defining beans [cache,XDbServer]; root of factory hierarchy
+[INFO ][2014-02-18 16:21:42] Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@3598cb3d: defining beans [cache,XDbServer]; root of factory hierarchy
+[INFO ][2014-02-18 16:22:47] 初始化spring容器
+[INFO ][2014-02-18 16:22:47] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@798fd984: display name [org.springframework.context.support.ClassPathXmlApplicationContext@798fd984]; startup date [Tue Feb 18 16:22:47 CST 2014]; root of context hierarchy
+[INFO ][2014-02-18 16:22:47] Loading XML bean definitions from class path resource [bean.xml]
+[INFO ][2014-02-18 16:22:47] Loading XML bean definitions from class path resource [com/x/server/conf/beanConf.xml]
+[INFO ][2014-02-18 16:22:47] Bean factory for application context [org.springframework.context.support.ClassPathXmlApplicationContext@798fd984]: org.springframework.beans.factory.support.DefaultListableBeanFactory@4eedf3f6
+[INFO ][2014-02-18 16:22:47] Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@4eedf3f6: defining beans [cache,XDbServer]; root of factory hierarchy
+[WARN ][2014-02-18 16:22:47] XMemcachedClient use Text protocol
+[WARN ][2014-02-18 16:22:47] XMemcachedClient in failure mode.
+[INFO ][2014-02-18 16:22:47] Creating 4 reactors...
+[WARN ][2014-02-18 16:22:47] The Controller started at localhost/127.0.0.1:0 ...
+[WARN ][2014-02-18 16:22:47] Add a session: 10.6.6.92:11211
+[WARN ][2014-02-18 16:22:47] Add a session: 10.6.6.92:11211
+[WARN ][2014-02-18 16:22:47] Add a session: 10.6.6.92:11211
+[WARN ][2014-02-18 16:22:47] Enable merge get commands
+[WARN ][2014-02-18 16:22:47] change mergeFactor from 50 to 50
+[INFO ][2014-02-18 16:22:47] 服务器已经已经启动:Tue Feb 18 16:22:47 CST 2014
+[INFO ][2014-02-18 16:22:52] 服务器已经安全关闭:Tue Feb 18 16:22:52 CST 2014
+[WARN ][2014-02-18 16:22:52] Client in failure mode,we don't remove session 10.6.6.92:11211
+[WARN ][2014-02-18 16:22:52] Client in failure mode,we don't remove session 10.6.6.92:11211
+[WARN ][2014-02-18 16:22:52] Client in failure mode,we don't remove session 10.6.6.92:11211
+[INFO ][2014-02-18 16:22:52] Controller has been stopped.

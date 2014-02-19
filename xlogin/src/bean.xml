@@ -31,6 +31,11 @@
  		<property name='platformType' value='1'/><!-- 当前平台类型，定义见LoginServer -->
  	</bean>
  	
+ 	<!--登陆服务器数据中心--> 
+ 	<bean id="LoginCenter" class = "com.x.server.util.LoginCenter">
+ 		<property name='loginServerIp' value='http://10.6.6.92:12003'/>
+ 	</bean>
+ 	
  	<!--提供给各游戏服调用的rmi接口,只有主登陆服才会启动--> 
     <bean id="LoginServerRmi" class="org.springframework.remoting.rmi.RmiServiceExporter"> 
         <property name="service" ref="LoginServerRmiImpl"/>
@@ -47,25 +52,5 @@
         <property name="serviceInterface" value="com.x.rmi.login.LoginServerRmi"/> 
         <property name="refreshStubOnConnectFailure" value = "true"/> 
     </bean>
-    
-    <!--登陆服务器数据中心--> 
- 	<bean id="LoginCenter" class = "com.x.server.util.LoginCenter">
- 		<property name='loginServerIp' value='http://10.6.6.92:12003'/>
- 		<!-- 邮件发送 -->
- 		<!--
- 		<property name='smtp' value='smtp.163.com'/>
- 		<property name='sslPort' value='25'/>
- 		<property name='emailEnding' value='@163.com'/>
- 		<property name='emailpassword' value='dongfang'/>
- 		<property name="emailAccounts">
- 			<list>
- 				<value>goodeasten1</value>
- 				<value>goodeasten2</value>
- 				<value>goodeasten3</value>
-				<value>goodeasten4</value>
-				<value>goodeasten5</value>
- 			</list>
- 		</property>
- 		-->
- 	</bean>
+ 	
 </beans>

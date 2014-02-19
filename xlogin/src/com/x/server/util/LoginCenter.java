@@ -1,5 +1,8 @@
 package com.x.server.util;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import com.x.util.Common;
 
 /**
@@ -7,6 +10,8 @@ import com.x.util.Common;
  * Description: 登陆服务器数据中心,多登陆服时只有主服务器生效,即所有登陆服共享一个数据中心
  */
 public class LoginCenter {
+	private static Logger logger = LoggerFactory.getLogger(LoginCenter.class);
+	
 	public static int platformType = Common.PLATFORM_TYPE_SELF;//当前平台类型
 
 	//登楼服设定

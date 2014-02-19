@@ -124,11 +124,11 @@ public class XLoginServer {
 //		ClientFactory.destoryClient();
 	}
 
-	public boolean isMainServer() {
+	public boolean getIsMainServer() {
 		return isMainServer;
 	}
 
-	public void setMainServer(boolean isMainServer) {
+	public void setIsMainServer(boolean isMainServer) {
 		this.isMainServer = isMainServer;
 	}
 

@@ -18,7 +18,7 @@
 	<context:annotation-config/>
 
 	<!-- 登陆服务器的接口 -->
- 	<bean id="LoginServer" class="com.hz.server.loginserver.base.LoginServer">
+ 	<bean id="XLoginServer" class="com.x.server.loginserver.XLoginServer">
  		<property name='serverPort' value='12005'/>
  		<property name='serverPortHttp' value='12003'/>
  		<property name="maxHandleThread">
@@ -39,23 +39,25 @@
         <property name='registryPort' value='12004' /> <!-- 不同登陆服可能不同 -->
     </bean>
     
+    <bean id="LoginServerRmiImpl" class="com.x.server.impl.LoginServerImpl"/>
+    
     <!--主登录服rmi,如果是主登陆服则是自己连自己--> 
     <bean id="MainLoginServer" class="org.springframework.remoting.rmi.RmiProxyFactoryBean"> 
         <property name="serviceUrl" value="rmi://127.0.0.1:12004/loginServerRmi"/> 
-        <property name="serviceInterface" value="com.hz.server.rmi.LoginServerRmi"/> 
+        <property name="serviceInterface" value="com.x.rmi.login.LoginServerRmi"/> 
         <property name="refreshStubOnConnectFailure" value = "true"/> 
     </bean>
     
     <!--登陆服务器数据中心--> 
- 	<bean id="LoginCenter" class = "com.hz.server.loginserver.logic.LoginCenter">
+ 	<bean id="LoginCenter" class = "com.x.server.util.LoginCenter">
  		<property name='loginServerIp' value='http://10.6.6.92:12003'/>
  		<!-- 邮件发送 -->
  		<!--
- 		<property name='smtp' value='smtp.163.com'/><!-- 简单邮件传输协议 -->
- 		<property name='sslPort' value='25'/><!-- 非ssl协议端口号 -->
- 		<property name='emailEnding' value='@163.com'/><!-- @163.com --><!-- 邮箱结尾 -->
- 		<property name='emailpassword' value='dongfang'/><!-- 密码相同 -->
- 		<property name="emailAccounts"><!-- 账号 -->
+ 		<property name='smtp' value='smtp.163.com'/>
+ 		<property name='sslPort' value='25'/>
+ 		<property name='emailEnding' value='@163.com'/>
+ 		<property name='emailpassword' value='dongfang'/>
+ 		<property name="emailAccounts">
  			<list>
  				<value>goodeasten1</value>
  				<value>goodeasten2</value>

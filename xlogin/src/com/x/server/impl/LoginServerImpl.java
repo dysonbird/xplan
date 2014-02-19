@@ -1,18 +1,21 @@
 package com.x.server.impl;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import com.x.rmi.login.LoginServerRmi;
-import com.x.server.factory.LoginBeanFactory;
 import com.x.server.util.LoginCenter;
 
 public class LoginServerImpl implements LoginServerRmi{
-	public static LoginCenter loginCenter = (LoginCenter)LoginBeanFactory.getBean("LoginCenter");
+	
+	@Autowired
+	public LoginCenter loginCenter;// = (LoginCenter)LoginBeanFactory.getBean("LoginCenter");
 
 	public LoginCenter getLoginCenter() {
 		return loginCenter;
 	}
 
 	public void setLoginCenter(LoginCenter loginCenter) {
-		LoginServerImpl.loginCenter = loginCenter;
+		this.loginCenter = loginCenter;
 	}
 
 	/**

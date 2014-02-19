@@ -1,7 +1,60 @@
 package com.x.server.handler;
 
+import java.util.HashMap;
+
+import org.jboss.netty.channel.ChannelHandlerContext;
+import org.jboss.netty.channel.MessageEvent;
 import org.jboss.netty.channel.SimpleChannelUpstreamHandler;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import com.x.protobuffer.Message.SendMessage;
+import com.x.server.factory.LoginBeanFactory;
+import com.x.server.loginserver.LoginMessage;
+import com.x.server.manage.LoginManage;
+import com.x.util.ProtocolDefine;
 
 public class LoginServerHandler extends SimpleChannelUpstreamHandler{
-
+	private static Logger logger = LoggerFactory.getLogger(LoginServerHandler.class);
+	public static LoginManage loginManage = (LoginManage)LoginBeanFactory.getBean("LoginManage");
+	
+	public void messageReceived(ChannelHandlerContext ctx, MessageEvent e)
+			throws Exception {
+		HashMap<String,Object> context = (HashMap<String,Object>)ctx.getAttachment();
+		if(context == null){
+			System.out.println("--该会话第一次发来消息--");
+			context = new HashMap<String,Object>();
+			ctx.setAttachment(context);
+		}
+		
+		SendMessage sm = (SendMessage)e.getMessage();
+		LoginMessage loginMessage = new LoginMessage(sm);
+		
+		loginMessage.setPlayerid(context.get("playerid")==null?0:((Long)context.get("playerid")));
+		loginMessage.setChannelHandlerContent(ctx);
+		System.out.println("命令码: " + loginMessage.getCommand());
+		
+		handleMessage(loginMessage,ctx);
+	}
+	
+	/**
+	 * Function name:handleMessage
+	 * Description: 消息处理
+	 * @param msg
+	 * @param ctx
+	 */
+	public void handleMessage(LoginMessage msg,ChannelHandlerContext ctx){
+		logger.info("---command="+msg.getCommand());
+		switch (msg.getCommand()) {
+		case ProtocolDefine.FIRST_CONNECT_LOGIN://第一次连接 连通性检查
+			loginManage.firstConnect(msg, ctx);
+			break;
+		case ProtocolDefine.LC_PLAYER_CREATE://注册账号
+			loginManage.createPlayerAccount(msg, ctx);
+			break;
+		default:
+			logger.info("--未知消息--" + msg.getCommand());
+			break;
+		}
+	}
 }

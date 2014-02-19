@@ -52,5 +52,57 @@
         <property name="serviceInterface" value="com.x.rmi.login.LoginServerRmi"/> 
         <property name="refreshStubOnConnectFailure" value = "true"/> 
     </bean>
+    
+    <bean id="LoginManage" class = "com.x.server.manage.LoginManage"/>
  	
+ 	<!--数据库代理--> 
+    <bean id="DbProxy" class="com.x.impl.DbProxyImpl"> 
+		<property name="loginEntityManage" ref="LoginEntityManage" />
+    </bean> 
+	
+	<bean id="LoginEntityManage" class="com.x.manage.EntityManage">
+ 		<property name="sessionFactory">
+ 			<ref bean="LoginSessionFactory" />
+ 		</property>
+ 	</bean>
+	
+	
+	<!-- login -->
+   <bean id="LoginDataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" 
+            destroy-method="close">
+            <property name="driverClass" value="com.mysql.jdbc.Driver"></property>
+            <property name="jdbcUrl" value="jdbc:mysql://10.6.6.92:3306/login?useUnicode=true&amp;characterEncoding=UTF-8"></property>
+            <property name="user" value="root"></property>
+            <property name="password" value="root"></property>
+            <property name="maxStatements" value="0"></property>
+            <property name="acquireIncrement" value="1"></property>
+            <property name="acquireRetryDelay" value="1000"></property>  
+    		<property name="acquireRetryAttempts" value="60"></property>
+            <property name="maxPoolSize" value="10"></property>
+            <property name="minPoolSize" value="1"></property>
+            <property name="initialPoolSize" value="2"></property>
+            <property name="maxIdleTime" value="60"></property> 
+    </bean>
+	
+	<bean id="LoginSessionFactory"
+		class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+		<property name="dataSource">
+			<ref bean="LoginDataSource" />
+		</property>
+		
+		<!-- 这个很重要 要不然会出现map错误-->
+		<property name="packagesToScan" value="com.x.db.login"/>
+		
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">
+					org.hibernate.dialect.MySQLDialect
+				</prop>
+			</props>
+		</property>
+		<property name="mappingResources">
+			<list>
+			</list>
+		</property>
+	</bean>
 </beans>

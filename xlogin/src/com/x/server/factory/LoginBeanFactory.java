@@ -24,4 +24,15 @@ public class LoginBeanFactory {
 	public static <T> Map<String,T> getBeans(Class<T> clazz) {
 		return factory.getBeansOfType(clazz);
 	}
+	
+//	private static BeanFactory factory = null;
+//	static {
+//		BeanDefinitionRegistry  reg = new DefaultListableBeanFactory();
+//	    XmlBeanDefinitionReader reader = new XmlBeanDefinitionReader(reg);
+//	    reader.loadBeanDefinitions(new  ClassPathResource("bean.xml"));
+//	    factory =  (BeanFactory)reg;	
+//	}
+//	public static Object getBean(String beanName){
+//		return factory.getBean(beanName);
+//	}
 }

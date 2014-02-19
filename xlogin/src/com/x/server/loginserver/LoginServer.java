@@ -58,4 +58,9 @@ public int startServer(int serverPort) {
 		
 		return 0;
 	}
+
+	//停止登陆服socketserver
+	public boolean stopServer() {
+		return true;
+	}
 }

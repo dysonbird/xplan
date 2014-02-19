@@ -17,7 +17,7 @@
 	<context:component-scan base-package="com.x.server"/>
 	<context:annotation-config/>
 
-<!-- 登陆服务器的接口 -->
+	<!-- 登陆服务器的接口 -->
  	<bean id="LoginServer" class="com.hz.server.loginserver.base.LoginServer">
  		<property name='serverPort' value='12005'/>
  		<property name='serverPortHttp' value='12003'/>
@@ -29,5 +29,41 @@
  		</property>
  		<property name='isMainServer' value='true'/>
  		<property name='platformType' value='1'/><!-- 当前平台类型，定义见LoginServer -->
+ 	</bean>
+ 	
+ 	<!--提供给各游戏服调用的rmi接口,只有主登陆服才会启动--> 
+    <bean id="LoginServerRmi" class="org.springframework.remoting.rmi.RmiServiceExporter"> 
+        <property name="service" ref="LoginServerRmiImpl"/>
+        <property name="serviceName" value="loginServerRmi"/> 
+        <property name="serviceInterface" value="com.x.rmi.login.LoginServerRmi"/>
+        <property name='registryPort' value='12004' /> <!-- 不同登陆服可能不同 -->
+    </bean>
+    
+    <!--主登录服rmi,如果是主登陆服则是自己连自己--> 
+    <bean id="MainLoginServer" class="org.springframework.remoting.rmi.RmiProxyFactoryBean"> 
+        <property name="serviceUrl" value="rmi://127.0.0.1:12004/loginServerRmi"/> 
+        <property name="serviceInterface" value="com.hz.server.rmi.LoginServerRmi"/> 
+        <property name="refreshStubOnConnectFailure" value = "true"/> 
+    </bean>
+    
+    <!--登陆服务器数据中心--> 
+ 	<bean id="LoginCenter" class = "com.hz.server.loginserver.logic.LoginCenter">
+ 		<property name='loginServerIp' value='http://10.6.6.92:12003'/>
+ 		<!-- 邮件发送 -->
+ 		<!--
+ 		<property name='smtp' value='smtp.163.com'/><!-- 简单邮件传输协议 -->
+ 		<property name='sslPort' value='25'/><!-- 非ssl协议端口号 -->
+ 		<property name='emailEnding' value='@163.com'/><!-- @163.com --><!-- 邮箱结尾 -->
+ 		<property name='emailpassword' value='dongfang'/><!-- 密码相同 -->
+ 		<property name="emailAccounts"><!-- 账号 -->
+ 			<list>
+ 				<value>goodeasten1</value>
+ 				<value>goodeasten2</value>
+ 				<value>goodeasten3</value>
+				<value>goodeasten4</value>
+				<value>goodeasten5</value>
+ 			</list>
+ 		</property>
+ 		-->
  	</bean>
 </beans>

@@ -10,5 +10,6 @@
 	<classpathentry kind="lib" path="lib/slf4j-ext-1.5.6.jar"/>
 	<classpathentry kind="lib" path="lib/slf4j-jcl-1.5.6.jar"/>
 	<classpathentry kind="lib" path="lib/spring.jar"/>
+	<classpathentry kind="lib" path="lib/protobuf-java-2.5.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

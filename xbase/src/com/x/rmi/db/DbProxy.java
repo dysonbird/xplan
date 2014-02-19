@@ -1,5 +1,9 @@
 package com.x.rmi.db;
 
-public interface DbProxy {
+import com.x.db.login.Account;
 
+public interface DbProxy {
+	public Account getAccountByName(String name);
+	
+	public boolean addAccount(Account account);
 }

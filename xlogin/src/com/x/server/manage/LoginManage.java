@@ -63,7 +63,7 @@ public class LoginManage {
 
 		logger.info("---创建账户 name="+name + "\t pwd="+pwd);
 		
-		byte rs = LoginUtil.checkName(name);// 名称检查
+		byte rs = LoginUtil.checkName(name, new String[] {Common.PRESET_ACCOUNT_NAME});// 名称检查
 		if (rs != 0) {// 名称有误
 			send.putByte(rs);
 			send.putString("名称有误");

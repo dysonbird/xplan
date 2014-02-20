@@ -11,15 +11,15 @@ public class LoginUtil {
 	/**
 	 * Function name:checkName
 	 * Description: 检查帐号名称的合法性
-	 * @return 返回:0=正常,-2=名称含有敏感字符,-3=名称长度或格式不符合规定,-7=账号格式有误,请勿使用"gd+数字"进行注册.
+	 * @return 返回:0=正常,-2=名称含有敏感字符,-3=名称长度或格式不符合规定,-7=账号格式有误,请勿使用"xx+数字"进行注册.
 	 */
-	public static byte checkName(String name){
+	public static byte checkName(String name, String[] prefix){
 		if(name == null || name.length()<4 || name.length()>12){//判断长度是否在4到12之间
 			return -3;
 		}
 		
-		if(isGuestName(name)){
-			return -7;//账号格式有误,请勿使用"gd+数字"进行注册.
+		if(isGuestName(name, prefix)){
+			return -7;//账号格式有误,请勿使用"xx+数字"进行注册 xx为系统预留前缀
 		}
 		
 		if(LoginUtil.isNotNumberOrWord(name)){//名称格式不符合规定
@@ -31,22 +31,25 @@ public class LoginUtil {
 	
 	/**
 	 * Function name:isGuestName
-	 * Description: 是否是试玩账号名
+	 * Description: 是否是某些前缀的账号
 	 * @param name
 	 * @return
 	 */
-	public static boolean isGuestName(String name){
-		name = name.toLowerCase();//小写
-		if(name.startsWith(Common.HOLE_ACCOUNT_NAME)){//系统预留资源,gd
-			String tempStr = name.substring(Common.HOLE_ACCOUNT_NAME.length());
-			if(isNumeric(tempStr) == false){
-				return false;
+	public static boolean isGuestName(String name, String[] prefixs){
+		name = name.toLowerCase();
+		for(String pre : prefixs){
+			if(name.startsWith(pre)){//系统预留账号前缀
+				String tempStr = name.substring(pre.length());
+				if(isNumeric(tempStr) == false){
+					return false;
+				}else{
+					return true;
+				}
 			}else{
-				return true;
+				return false;
 			}
-		}else{
-			return false;
 		}
+		return true;
 	}
 	
 	/**

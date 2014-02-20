@@ -71,7 +71,7 @@
    <bean id="LoginDataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" 
             destroy-method="close">
             <property name="driverClass" value="com.mysql.jdbc.Driver"></property>
-            <property name="jdbcUrl" value="jdbc:mysql://10.6.6.92:3306/login?useUnicode=true&amp;characterEncoding=UTF-8"></property>
+            <property name="jdbcUrl" value="jdbc:mysql://10.6.6.92:3306/logindb?useUnicode=true&amp;characterEncoding=UTF-8"></property>
             <property name="user" value="root"></property>
             <property name="password" value="root"></property>
             <property name="maxStatements" value="0"></property>

@@ -3,6 +3,8 @@ package com.x.server.handler;
 import java.util.HashMap;
 
 import org.jboss.netty.channel.ChannelHandlerContext;
+import org.jboss.netty.channel.ChannelStateEvent;
+import org.jboss.netty.channel.ExceptionEvent;
 import org.jboss.netty.channel.MessageEvent;
 import org.jboss.netty.channel.SimpleChannelUpstreamHandler;
 import org.slf4j.Logger;
@@ -56,5 +58,36 @@ public class LoginServerHandler extends SimpleChannelUpstreamHandler{
 			logger.info("--未知消息--" + msg.getCommand());
 			break;
 		}
+	}
+	
+	@Override
+	public void channelConnected(ChannelHandlerContext ctx, ChannelStateEvent e)
+			throws Exception {
+		// 客户端连接成功
+		super.channelConnected(ctx, e);
+	}
+	
+	@Override
+	public void channelClosed(ChannelHandlerContext ctx, ChannelStateEvent e)
+			throws Exception {
+		//客户端断开连接
+		super.channelClosed(ctx, e);
+		HashMap<String,Object> context = (HashMap<String,Object>)ctx.getAttachment();
+		if(context != null){
+			Long playerId = (Long)context.get("playerId");
+			if(playerId == null){//还未登陆
+//				logger.info("--玩家下线:还未登陆");
+			}else{
+//				loginManage.playerGogoGameLine(playerId);
+			}
+		}else{
+			logger.info("--玩家断开连接:未产生任何操作,ip:"+ctx.getChannel().getRemoteAddress().toString());
+		}
+	}
+	
+	@Override
+    public void exceptionCaught(ChannelHandlerContext ctx, ExceptionEvent e) {
+		ctx.getChannel().close();
+		e.getChannel().close();
 	}
 }

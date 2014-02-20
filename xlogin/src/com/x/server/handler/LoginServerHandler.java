@@ -32,7 +32,7 @@ public class LoginServerHandler extends SimpleChannelUpstreamHandler{
 		SendMessage sm = (SendMessage)e.getMessage();
 		LoginMessage loginMessage = new LoginMessage(sm);
 		
-		loginMessage.setPlayerid(context.get("playerid")==null?0:((Long)context.get("playerid")));
+		loginMessage.setPlayerid(context.get("accountId")==null?0:((Long)context.get("accountId")));
 		loginMessage.setChannelHandlerContent(ctx);
 		System.out.println("命令码: " + loginMessage.getCommand());
 		
@@ -54,6 +54,9 @@ public class LoginServerHandler extends SimpleChannelUpstreamHandler{
 		case ProtocolDefine.LC_PLAYER_CREATE://注册账号
 			loginManage.createPlayerAccount(msg, ctx);
 			break;
+		case ProtocolDefine.LC_PLAYER_LOGIN://用户account登陆
+			loginManage.login(msg, ctx);
+			break;
 		default:
 			logger.info("--未知消息--" + msg.getCommand());
 			break;
@@ -74,11 +77,12 @@ public class LoginServerHandler extends SimpleChannelUpstreamHandler{
 		super.channelClosed(ctx, e);
 		HashMap<String,Object> context = (HashMap<String,Object>)ctx.getAttachment();
 		if(context != null){
-			Long playerId = (Long)context.get("playerId");
-			if(playerId == null){//还未登陆
+			Long accountId = (Long)context.get("accountId");
+			if(accountId == null){//还未登陆
 //				logger.info("--玩家下线:还未登陆");
 			}else{
-//				loginManage.playerGogoGameLine(playerId);
+				//登陆成功后 会断开登陆服的链接 玩家链接到游戏服
+				loginManage.removeAccountCtx(accountId);
 			}
 		}else{
 			logger.info("--玩家断开连接:未产生任何操作,ip:"+ctx.getChannel().getRemoteAddress().toString());

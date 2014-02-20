@@ -11,7 +11,7 @@ public class LoginMessage {
 	public final static byte MSG_TYPE_SOCKET =1;//socket
 	public final static byte MSG_TYPE_HTTP =2;//http
 
-	private long playerid;
+	private long playerid;	//账号ID
 	
 	private int sessionid;
 	

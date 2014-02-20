@@ -4,8 +4,6 @@ import java.util.HashMap;
 
 import org.jboss.netty.channel.ChannelHandlerContext;
 
-import com.x.util.Common;
-
 public class LoginUtil {
 
 	/**

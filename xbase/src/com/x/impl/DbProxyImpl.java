@@ -14,6 +14,9 @@ public class DbProxyImpl implements DbProxy {
 	
 	private EntityManage loginEntityManage;
 	
+	/**
+	 * 根据账号名字 查找账号
+	 */
 	@Override
 	public Account getAccountByName(String name) {
 		Account account = null;
@@ -28,10 +31,26 @@ public class DbProxyImpl implements DbProxy {
 		return account;
 	}
 
+	/**
+	 * 新增账号
+	 */
 	@Override
 	public boolean addAccount(Account account) {
 		try {
 			loginEntityManage.save(account);
+			return true;
+		} catch (Exception e) {
+			return false;
+		}
+	}
+	
+	/**
+	 * 更新账号信息
+	 */
+	@Override
+	public boolean updateAccount(Account account) {
+		try {
+			loginEntityManage.update(account);
 			return true;
 		} catch (Exception e) {
 			return false;

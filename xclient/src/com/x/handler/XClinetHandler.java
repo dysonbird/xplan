@@ -26,7 +26,14 @@ public class XClinetHandler extends SimpleChannelUpstreamHandler{
 			} else{
 				System.out.println("×¢²á³É¹¦");
 			}
-			
+			break;
+		case ProtocolDefine.LC_PLAYER_LOGIN:
+			if(sm.getByteValue(0).byteAt(0) < 0){
+				System.out.println(sm.getStrValue(0));
+			} else{
+				System.out.println("ÕËºÅID£º" + sm.getLongValue(0));
+				System.out.println("sessionID£º" + sm.getIntValue(0));
+			}
 			break;
 		}
 	}

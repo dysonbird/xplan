@@ -63,7 +63,11 @@ public class XClient {
 			if (message.equals("stop")){
 				break;
 			} else if(message.equals("create")){
+				System.out.println("ÕËºÅ#ÃÜÂë#ÊÖ»úºÅÂë");
 				createAccount();
+			} else if(message.equals("login")){
+				System.out.println("ÕËºÅ#ÃÜÂë");
+				loginAccount();
 			} else if(message.equals("event")){
 				putEvent();
 			}
@@ -95,6 +99,25 @@ public class XClient {
 		builder.addStrValue(name);
 		builder.addStrValue(pwd);
 		builder.addStrValue(phoneNumber);
+		future.getChannel().write(builder.build());
+	}
+	
+	private static void loginAccount() throws IOException{
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		String message = br.readLine().trim();
+		String[] str = message.split("#");
+		
+		String name = str[0];
+		String pwd = str[1];
+		
+		SendMessage.Builder builder = SendMessage.newBuilder();
+		builder.setCommand(ProtocolDefine.LC_PLAYER_LOGIN);
+		builder.setMsgType(ByteString.copyFrom(new byte[]{1}));
+		builder.addStrValue(name);
+		builder.addStrValue(pwd);
+		builder.addStrValue("eclipse");
+		builder.addStrValue("");
+		builder.addStrValue("");
 		future.getChannel().write(builder.build());
 	}
 	

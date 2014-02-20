@@ -1,0 +1,15 @@
+package protobuffer;
+
+option java_package = "com.x.protobuffer";
+option java_outer_classname = "Message";
+
+message SendMessage {
+	 required int32 command = 1;
+	 required bytes msgType = 2;
+	 
+	 repeated string strValue = 3;
+	 repeated int32 intValue = 4;
+	 repeated bool boolValue = 5;
+	 repeated bytes byteValue = 6;
+	 repeated int64 longValue = 7;
+}

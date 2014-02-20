@@ -61,12 +61,6 @@ public class Account  implements java.io.Serializable {
 	@Column(columnDefinition = "varchar(256) DEFAULT NULL COMMENT '终端信息'")
 	private String terminalinfo;
 	
-	@Column(columnDefinition = "  smallint(6) DEFAULT NULL COMMENT '资源级别' ")
-	private Short resourcelevel;
-	
-	@Column( columnDefinition = "char(128) DEFAULT NULL COMMENT '交互密钥'")
-	private String interactionkey;//vip=级别=有效期 （long）
-	
 	@Column(columnDefinition = "  varchar(1024) DEFAULT NULL COMMENT '个人信息' ")
 	private String personalinfo;
 	
@@ -90,9 +84,6 @@ public class Account  implements java.io.Serializable {
 	
 	@Column(columnDefinition = "varchar(30) DEFAULT NULL COMMENT '账号锁定原因'")
 	private String lockwhys;	  //被封号的原因
-	
-	@Column( columnDefinition = " varchar(1024) DEFAULT NULL COMMENT '已经激活的分区:用于判断是否对需要激活才能进入的分区进行激活记录'" )
-	private String activatedArea;
 	
 	@Column(columnDefinition="tinyint(4) DEFAULT '0' COMMENT '超级账号标识:0非超级账号 1超级账号'")
 	private Byte superMark;
@@ -130,9 +121,6 @@ public class Account  implements java.io.Serializable {
 		this.phone = phone;
 		this.email = email;
 		this.terminalinfo = terminalinfo;
-		this.resourcelevel = resourcelevel;
-		this.interactionkey = interactionkey;
-		this.activatedArea = activatedArea;
 		this.superMark = superMark;
 	}
 
@@ -222,31 +210,6 @@ public class Account  implements java.io.Serializable {
 
 	public void setTerminalinfo(String terminalinfo) {
 		this.terminalinfo = terminalinfo;
-	}
-
-	public Short getResourcelevel() {
-		return this.resourcelevel;
-	}
-
-	public void setResourcelevel(Short resourcelevel) {
-		this.resourcelevel = resourcelevel;
-	}
-
-	public String getInteractionkey() {
-		return this.interactionkey;
-	}
-
-	public void setInteractionkey(String interactionkey) {
-		this.interactionkey = interactionkey;
-	}
-	
-	
-	public String getActivatedArea() {
-		return activatedArea;
-	}
-
-	public void setActivatedArea(String activatedArea) {
-		this.activatedArea = activatedArea;
 	}
 	
 	public Byte getSuperMark() {

@@ -6,7 +6,7 @@ public class Common {
 	public static long LONG_MAX_VALUE=(long)Math.pow(2, 63);	
 	public final static int PLATFORM_TYPE_SELF = 1;
 	
-	public static final String HOLE_ACCOUNT_NAME = "x";//保留的帐号名称,做快速注册用
+	public static final String PRESET_ACCOUNT_NAME = "x";//保留的帐号名称,做快速注册用
 
 	/**
 	 * 

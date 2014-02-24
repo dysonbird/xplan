@@ -79,10 +79,11 @@ public class LoginServerHandler extends SimpleChannelUpstreamHandler{
 		if(context != null){
 			Long accountId = (Long)context.get("accountId");
 			if(accountId == null){//还未登陆
-//				logger.info("--玩家下线:还未登陆");
+				//logger.info("--玩家下线:还未登陆");
 			}else{
 				//登陆成功后 会断开登陆服的链接 玩家链接到游戏服
 				loginManage.removeAccountCtx(accountId);
+				logger.info("玩家:" + accountId +" 跳转到游戏服,断开登陆服的连接");
 			}
 		}else{
 			logger.info("--玩家断开连接:未产生任何操作,ip:"+ctx.getChannel().getRemoteAddress().toString());

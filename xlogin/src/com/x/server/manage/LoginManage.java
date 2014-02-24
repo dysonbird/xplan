@@ -175,7 +175,7 @@ public class LoginManage {
 	
 	private int doLogin(Account account, ChannelHandlerContext ctx, byte msgType) {
 		HashMap<String, Object> context = (HashMap<String, Object>) ctx.getAttachment();
-		context.put("playerId", account.getId());// 记录连接对应的帐号id
+		context.put("accountId", account.getId());// 记录连接对应的帐号id
 		context.put("account", account);
 		int sessionId = 0;
 		try {
@@ -439,6 +439,7 @@ public class LoginManage {
 	 * @param accountId
 	 */
 	public void removeAccountCtx(Long accountId) {
+		// 移除本登陆服的数据 数据已经在主登陆服
 		allAccountCtx.remove(Long.valueOf(accountId));
 		
 		//移除主登陆服的数据？

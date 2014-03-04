@@ -2,6 +2,7 @@ package com.x.server.handler;
 
 import java.util.HashMap;
 
+import org.jboss.netty.buffer.ChannelBuffer;
 import org.jboss.netty.channel.ChannelHandlerContext;
 import org.jboss.netty.channel.ChannelStateEvent;
 import org.jboss.netty.channel.ExceptionEvent;
@@ -10,6 +11,7 @@ import org.jboss.netty.channel.SimpleChannelUpstreamHandler;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.google.protobuf.ByteString;
 import com.x.protobuffer.Message.SendMessage;
 import com.x.server.factory.LoginBeanFactory;
 import com.x.server.loginserver.LoginMessage;
@@ -22,6 +24,8 @@ public class LoginServerHandler extends SimpleChannelUpstreamHandler{
 	
 	public void messageReceived(ChannelHandlerContext ctx, MessageEvent e)
 			throws Exception {
+		ChannelBuffer buf = (ChannelBuffer)e.getMessage();
+		@SuppressWarnings("unchecked")
 		HashMap<String,Object> context = (HashMap<String,Object>)ctx.getAttachment();
 		if(context == null){
 			System.out.println("--该会话第一次发来消息--");
@@ -29,14 +33,24 @@ public class LoginServerHandler extends SimpleChannelUpstreamHandler{
 			ctx.setAttachment(context);
 		}
 		
-		SendMessage sm = (SendMessage)e.getMessage();
-		LoginMessage loginMessage = new LoginMessage(sm);
+		try {
+			if(buf.hasArray()){
+				byte[] gets = buf.array();
+				logger.info("gets: " + gets + " Size: " + gets.length);
+				SendMessage sm = (SendMessage)SendMessage.parseFrom(gets);
+				LoginMessage loginMessage = new LoginMessage(sm);
+				
+				loginMessage.setPlayerid(context.get("accountId")==null?0:((Long)context.get("accountId")));
+				loginMessage.setChannelHandlerContent(ctx);
+				System.out.println("Test: " + sm.getBoolValue(0));
+				System.out.println("命令码: " + loginMessage.getCommand() + " MsgType: " + loginMessage.getMsgType());
+				
+				handleMessage(loginMessage,ctx);
+			}
+		} catch(Exception ex){
+			ex.printStackTrace();
+		}
 		
-		loginMessage.setPlayerid(context.get("accountId")==null?0:((Long)context.get("accountId")));
-		loginMessage.setChannelHandlerContent(ctx);
-		System.out.println("命令码: " + loginMessage.getCommand());
-		
-		handleMessage(loginMessage,ctx);
 	}
 	
 	/**
@@ -67,6 +81,7 @@ public class LoginServerHandler extends SimpleChannelUpstreamHandler{
 	public void channelConnected(ChannelHandlerContext ctx, ChannelStateEvent e)
 			throws Exception {
 		// 客户端连接成功
+		System.out.println("--客户端连接成功--");
 		super.channelConnected(ctx, e);
 	}
 	

@@ -3,15 +3,11 @@ package com.x.server.factory;
 import org.jboss.netty.channel.ChannelPipeline;
 import org.jboss.netty.channel.ChannelPipelineFactory;
 import org.jboss.netty.channel.Channels;
-import org.jboss.netty.handler.codec.frame.LengthFieldBasedFrameDecoder;
-import org.jboss.netty.handler.codec.protobuf.ProtobufDecoder;
-import org.jboss.netty.handler.codec.protobuf.ProtobufEncoder;
-import org.jboss.netty.handler.codec.protobuf.ProtobufVarint32FrameDecoder;
-import org.jboss.netty.handler.codec.protobuf.ProtobufVarint32LengthFieldPrepender;
+import org.jboss.netty.handler.codec.string.StringDecoder;
+import org.jboss.netty.handler.codec.string.StringEncoder;
 import org.jboss.netty.handler.execution.ExecutionHandler;
 import org.jboss.netty.handler.execution.OrderedMemoryAwareThreadPoolExecutor;
 
-import com.x.protobuffer.Message.SendMessage;
 import com.x.server.handler.LoginServerHandler;
 
 public class LoginServerPipelineFactory implements ChannelPipelineFactory{
@@ -21,11 +17,11 @@ public class LoginServerPipelineFactory implements ChannelPipelineFactory{
 
 	@Override
 	public ChannelPipeline getPipeline() throws Exception {
-		ChannelPipeline pipeline = Channels.pipeline();
-    	pipeline.addLast("executor", executorHandler);//handler的executor
-    	pipeline.addLast("decoder", new LengthFieldBasedFrameDecoder(10240,0,2,-2,0));
-    	pipeline.addLast("handler", new LoginServerHandler());
-      return pipeline;
+//		ChannelPipeline pipeline = Channels.pipeline();
+//    	pipeline.addLast("executor", executorHandler);//handler的executor
+//    	pipeline.addLast("decoder", new LengthFieldBasedFrameDecoder(10240,0,2,-2,0));
+//    	pipeline.addLast("handler", new LoginServerHandler());
+//      return pipeline;
         
 //        ChannelPipeline pipeline = Channels.pipeline();
 //        pipeline.addLast("executor", executorHandler);//handler的executor
@@ -35,5 +31,12 @@ public class LoginServerPipelineFactory implements ChannelPipelineFactory{
 //        pipeline.addLast("protobufEncoder", new ProtobufEncoder());
 //        pipeline.addLast("handler", new LoginServerHandler());
 //		return pipeline;
+      
+		ChannelPipeline pipeline = Channels.pipeline();
+		pipeline.addLast("executor", executorHandler);//handler的executor
+  		pipeline.addLast("decoder", new StringDecoder());  
+  		pipeline.addLast("encoder", new StringEncoder());
+  		pipeline.addLast("handler", new LoginServerHandler());
+  		return pipeline;
 	}
 }

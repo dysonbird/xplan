@@ -7,9 +7,10 @@ import org.jboss.netty.channel.ChannelHandlerContext;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import tutorial.Basemessage.BaseMessage;
+
 import com.google.protobuf.ByteString;
 import com.x.db.login.Account;
-import com.x.protobuffer.Message.SendMessage;
 import com.x.rmi.db.DbProxy;
 import com.x.rmi.login.LoginServerRmi;
 import com.x.server.factory.LoginBeanFactory;
@@ -58,12 +59,12 @@ public class LoginManage {
 		Account account = null;
 		byte rs = 0;	//登陆结果 小于0 登陆失败
 		
-		SendMessage sm = msg.getSm();
-		String name = sm.getStrValue(0); 		// 用户名
-		String pwd = sm.getStrValue(1); 		// 密码
-		String handset = sm.getStrValue(2);	// 平台 iphone or android
-		String phoneModel = sm.getStrValue(3); // 手机型号
-		String machineNo = sm.getStrValue(4); // 设备唯一标识
+		BaseMessage bm = msg.getBm();
+		String name = bm.getStrValue(0); 		// 用户名
+		String pwd = bm.getStrValue(1); 		// 密码
+		String handset = bm.getStrValue(2);	// 平台 iphone or android
+		String phoneModel = bm.getStrValue(3); // 手机型号
+		String machineNo = bm.getStrValue(4); // 设备唯一标识
 		
 		byte connMode = msg.getMsgType();	// 连接方式,1是socket 2是http
 
@@ -311,10 +312,10 @@ public class LoginManage {
 			return;
 		}
 
-		SendMessage sm = msg.getSm();
-		String name = sm.getStrValue(0); 			// 用户名
-		String pwd = sm.getStrValue(1); 		    // 密码
-		String phoneNumber = sm.getStrValue(2);   // 手机号码
+		BaseMessage bm = msg.getBm();
+		String name = bm.getStrValue(0); 			// 用户名
+		String pwd = bm.getStrValue(1); 		    // 密码
+		String phoneNumber = bm.getStrValue(2);   // 手机号码
 
 		logger.info("---创建账户 name="+name + "\t pwd="+pwd);
 		
@@ -407,17 +408,17 @@ public class LoginManage {
 	}
 	
 	public void firstConnect(LoginMessage msg,ChannelHandlerContext ctx){
-		SendMessage sm = msg.getSm();
-		int channel = sm.getIntValue(0);
+		BaseMessage bm = msg.getBm();
+		int channel = bm.getIntValue(0);
 		HashMap<String,Object> context = (HashMap<String,Object>)ctx.getAttachment();
 		context.put("channel", (short)channel);
 		
-		SendMessage.Builder builder = SendMessage.newBuilder();
+		BaseMessage.Builder builder = BaseMessage.newBuilder();
 		builder.setCommand(ProtocolDefine.FIRST_CONNECT_LOGIN);
 		builder.setMsgType(ByteString.copyFrom(new byte[]{1}));
 		builder.addStrValue("登陆服务器返回成功");
 		
-		ctx.getChannel().write(builder.build());
+		ctx.getChannel().write(builder.build().toString());
 	}
 
 	public LoginServerRmi getMainLoginServer() {

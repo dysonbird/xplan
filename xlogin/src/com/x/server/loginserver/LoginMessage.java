@@ -3,8 +3,9 @@ package com.x.server.loginserver;
 import org.jboss.netty.channel.Channel;
 import org.jboss.netty.channel.ChannelHandlerContext;
 
+import tutorial.Basemessage.BaseMessage;
+
 import com.google.protobuf.ByteString;
-import com.x.protobuffer.Message.SendMessage;
 
 public class LoginMessage {
 	//消息类型
@@ -15,18 +16,18 @@ public class LoginMessage {
 	
 	private int sessionid;
 	
-	private SendMessage sm;
+	private BaseMessage bm;
 	
-	private SendMessage.Builder builder;
+	private BaseMessage.Builder builder;
 	
 	private ChannelHandlerContext channelHandlerContent = null;//事件关联的channelContext
 
 	public LoginMessage() {
-		builder = SendMessage.newBuilder();
+		builder = BaseMessage.newBuilder();
 	}
 	
-	public LoginMessage(SendMessage sm){
-		this.setSm(sm);
+	public LoginMessage(BaseMessage bm){
+		this.setBm(bm);
 	}
 
 	public long getPlayerid() {
@@ -45,12 +46,12 @@ public class LoginMessage {
 		this.sessionid = sessionid;
 	}
 
-	public SendMessage getSm() {
-		return sm;
+	public BaseMessage getBm() {
+		return bm;
 	}
 
-	public void setSm(SendMessage sm) {
-		this.sm = sm;
+	public void setBm(BaseMessage bm) {
+		this.bm = bm;
 	}
 
 	public ChannelHandlerContext getChannelHandlerContent() {
@@ -62,7 +63,7 @@ public class LoginMessage {
 	}
 
 	public int getCommand() {
-		return sm.getCommand();
+		return bm.getCommand();
 	}
 	
 	public void setCommand(int command){
@@ -70,7 +71,7 @@ public class LoginMessage {
 	}
 	
 	public byte getMsgType(){
-		return sm.getMsgType().byteAt(0);
+		return bm.getMsgType().byteAt(0);
 	}
 	
 	public void setMsgType(byte type){

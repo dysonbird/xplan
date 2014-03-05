@@ -35,7 +35,7 @@ public class LoginServerHandler extends SimpleChannelUpstreamHandler{
 		
 		try {
 			if(msg != null){
-				BaseMessage sm = (BaseMessage)BaseMessage.parseFrom(ByteString.copyFrom(msg.getBytes()));
+				BaseMessage sm = (BaseMessage)BaseMessage.parseFrom(msg.getBytes("ISO-8859-1"));
 				LoginMessage loginMessage = new LoginMessage(sm);
 				
 				loginMessage.setPlayerid(context.get("accountId")==null?0:((Long)context.get("accountId")));

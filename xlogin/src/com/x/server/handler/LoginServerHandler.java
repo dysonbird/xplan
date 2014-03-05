@@ -1,6 +1,5 @@
 package com.x.server.handler;
 
-import java.util.Arrays;
 import java.util.HashMap;
 
 import org.jboss.netty.channel.ChannelHandlerContext;
@@ -13,7 +12,6 @@ import org.slf4j.LoggerFactory;
 
 import tutorial.Basemessage.BaseMessage;
 
-import com.google.protobuf.ByteString;
 import com.x.server.factory.LoginBeanFactory;
 import com.x.server.loginserver.LoginMessage;
 import com.x.server.manage.LoginManage;
@@ -25,9 +23,7 @@ public class LoginServerHandler extends SimpleChannelUpstreamHandler{
 	
 	public void messageReceived(ChannelHandlerContext ctx, MessageEvent e)
 			throws Exception {
-		String msg = (String)e.getMessage();
-		System.out.println("Server: " + msg.length());
-		
+		BaseMessage bm = (BaseMessage)e.getMessage();
 		@SuppressWarnings("unchecked")
 		HashMap<String,Object> context = (HashMap<String,Object>)ctx.getAttachment();
 		if(context == null){
@@ -37,16 +33,16 @@ public class LoginServerHandler extends SimpleChannelUpstreamHandler{
 		}
 		
 		try {
-			if(msg != null){
-				byte[] gets = msg.getBytes();
-				System.out.println("Server Byte[]: " + Arrays.toString(gets));
-				BaseMessage sm = (BaseMessage)BaseMessage.parseFrom(gets);
-				LoginMessage loginMessage = new LoginMessage(sm);
+			if(bm != null){
+//				byte[] gets = msg.getBytes();
+//				System.out.println("Server Byte[]: " + Arrays.toString(gets));
+//				BaseMessage sm = (BaseMessage)BaseMessage.parseFrom(msg);
+				LoginMessage loginMessage = new LoginMessage(bm);
 				
 				loginMessage.setPlayerid(context.get("accountId")==null?0:((Long)context.get("accountId")));
 				loginMessage.setChannelHandlerContent(ctx);
 				System.out.println("命令码: " + loginMessage.getCommand() + " MsgType: " + loginMessage.getMsgType());
-				ctx.getChannel().write(new String(sm.toByteArray()));
+				ctx.getChannel().write(bm);
 				//handleMessage(loginMessage,ctx);
 			}
 		} catch(Exception ex){

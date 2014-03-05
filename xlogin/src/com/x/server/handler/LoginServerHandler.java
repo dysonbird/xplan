@@ -26,6 +26,8 @@ public class LoginServerHandler extends SimpleChannelUpstreamHandler{
 	public void messageReceived(ChannelHandlerContext ctx, MessageEvent e)
 			throws Exception {
 		String msg = (String)e.getMessage();
+		System.out.println("Server: " + msg.length());
+		
 		@SuppressWarnings("unchecked")
 		HashMap<String,Object> context = (HashMap<String,Object>)ctx.getAttachment();
 		if(context == null){
@@ -44,10 +46,8 @@ public class LoginServerHandler extends SimpleChannelUpstreamHandler{
 				loginMessage.setPlayerid(context.get("accountId")==null?0:((Long)context.get("accountId")));
 				loginMessage.setChannelHandlerContent(ctx);
 				System.out.println("命令码: " + loginMessage.getCommand() + " MsgType: " + loginMessage.getMsgType());
-				//System.out.println("Test: " + sm.getByteValue(0).byteAt(0));
-				//System.out.println("Channel: " + sm.getIntValue(0));
-				
-				handleMessage(loginMessage,ctx);
+				ctx.getChannel().write(msg);
+				//handleMessage(loginMessage,ctx);
 			}
 		} catch(Exception ex){
 			ex.printStackTrace();

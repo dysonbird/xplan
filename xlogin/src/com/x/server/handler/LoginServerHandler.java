@@ -35,14 +35,14 @@ public class LoginServerHandler extends SimpleChannelUpstreamHandler{
 		
 		try {
 			if(msg != null){
-				BaseMessage sm = (BaseMessage)BaseMessage.parseFrom(ByteString.copyFromUtf8(msg));
+				BaseMessage sm = (BaseMessage)BaseMessage.parseFrom(ByteString.copyFrom(msg.getBytes()));
 				LoginMessage loginMessage = new LoginMessage(sm);
 				
 				loginMessage.setPlayerid(context.get("accountId")==null?0:((Long)context.get("accountId")));
 				loginMessage.setChannelHandlerContent(ctx);
 				System.out.println("命令码: " + loginMessage.getCommand() + " MsgType: " + loginMessage.getMsgType());
-				System.out.println("Test: " + sm.getByteValue(0).byteAt(0));
-				System.out.println("Channel: " + sm.getIntValue(0));
+				//System.out.println("Test: " + sm.getByteValue(0).byteAt(0));
+				//System.out.println("Channel: " + sm.getIntValue(0));
 				
 				handleMessage(loginMessage,ctx);
 			}

@@ -46,7 +46,7 @@ public class LoginServerHandler extends SimpleChannelUpstreamHandler{
 				loginMessage.setPlayerid(context.get("accountId")==null?0:((Long)context.get("accountId")));
 				loginMessage.setChannelHandlerContent(ctx);
 				System.out.println("命令码: " + loginMessage.getCommand() + " MsgType: " + loginMessage.getMsgType());
-				ctx.getChannel().write(msg);
+				ctx.getChannel().write(new String(sm.toByteArray()));
 				//handleMessage(loginMessage,ctx);
 			}
 		} catch(Exception ex){

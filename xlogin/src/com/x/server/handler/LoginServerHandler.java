@@ -1,5 +1,6 @@
 package com.x.server.handler;
 
+import java.util.Arrays;
 import java.util.HashMap;
 
 import org.jboss.netty.channel.ChannelHandlerContext;
@@ -35,7 +36,9 @@ public class LoginServerHandler extends SimpleChannelUpstreamHandler{
 		
 		try {
 			if(msg != null){
-				BaseMessage sm = (BaseMessage)BaseMessage.parseFrom(msg.getBytes("ISO-8859-1"));
+				byte[] gets = msg.getBytes();
+				System.out.println("Server Byte[]: " + Arrays.toString(gets));
+				BaseMessage sm = (BaseMessage)BaseMessage.parseFrom(gets);
 				LoginMessage loginMessage = new LoginMessage(sm);
 				
 				loginMessage.setPlayerid(context.get("accountId")==null?0:((Long)context.get("accountId")));

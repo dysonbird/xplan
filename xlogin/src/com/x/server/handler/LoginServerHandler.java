@@ -2,6 +2,7 @@ package com.x.server.handler;
 
 import java.util.HashMap;
 
+import org.jboss.netty.buffer.ChannelBuffer;
 import org.jboss.netty.channel.ChannelHandlerContext;
 import org.jboss.netty.channel.ChannelStateEvent;
 import org.jboss.netty.channel.ExceptionEvent;
@@ -23,7 +24,7 @@ public class LoginServerHandler extends SimpleChannelUpstreamHandler{
 	
 	public void messageReceived(ChannelHandlerContext ctx, MessageEvent e)
 			throws Exception {
-		BaseMessage bm = (BaseMessage)e.getMessage();
+		ChannelBuffer buf = (ChannelBuffer)e.getMessage();
 		@SuppressWarnings("unchecked")
 		HashMap<String,Object> context = (HashMap<String,Object>)ctx.getAttachment();
 		if(context == null){
@@ -32,22 +33,29 @@ public class LoginServerHandler extends SimpleChannelUpstreamHandler{
 			ctx.setAttachment(context);
 		}
 		
-		try {
-			if(bm != null){
-//				byte[] gets = msg.getBytes();
-//				System.out.println("Server Byte[]: " + Arrays.toString(gets));
-//				BaseMessage sm = (BaseMessage)BaseMessage.parseFrom(msg);
-				LoginMessage loginMessage = new LoginMessage(bm);
-				
-				loginMessage.setPlayerid(context.get("accountId")==null?0:((Long)context.get("accountId")));
-				loginMessage.setChannelHandlerContent(ctx);
-				System.out.println("命令码: " + loginMessage.getCommand() + " MsgType: " + loginMessage.getMsgType());
-				ctx.getChannel().write(bm);
-				//handleMessage(loginMessage,ctx);
-			}
-		} catch(Exception ex){
-			ex.printStackTrace();
+		if(buf.hasArray()){
+			byte[] gets = buf.array();
+			BaseMessage bm = (BaseMessage)BaseMessage.parseFrom(gets);
+			LoginMessage loginMessage = new LoginMessage(bm);
+			System.out.println("命令码: " + loginMessage.getCommand());
 		}
+		ctx.getChannel().write(buf.array());
+//		try {
+//			if(bm != null){
+////				byte[] gets = msg.getBytes();
+////				System.out.println("Server Byte[]: " + Arrays.toString(gets));
+////				BaseMessage sm = (BaseMessage)BaseMessage.parseFrom(msg);
+////				LoginMessage loginMessage = new LoginMessage(bm);
+//				
+//				loginMessage.setPlayerid(context.get("accountId")==null?0:((Long)context.get("accountId")));
+//				loginMessage.setChannelHandlerContent(ctx);
+//				System.out.println("命令码: " + loginMessage.getCommand() + " MsgType: " + loginMessage.getMsgType());
+////				ctx.getChannel().write(bm);
+//				//handleMessage(loginMessage,ctx);
+//			}
+//		} catch(Exception ex){
+//			ex.printStackTrace();
+//		}
 		
 	}
 	

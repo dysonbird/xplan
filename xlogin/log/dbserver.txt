@@ -19685,3 +19685,820 @@ Caused by: org.hibernate.hql.ast.QuerySyntaxException: Account is not mapped [fr
 [INFO ][2014-03-05 17:20:56] 服务器已经已经启动:Wed Mar 05 17:20:56 CST 2014
 [INFO ][2014-03-05 17:21:03] --玩家断开连接:未产生任何操作,ip:/10.6.6.92:58286
 [INFO ][2014-03-05 17:21:45] --玩家断开连接:未产生任何操作,ip:/10.6.6.92:58292
+[INFO ][2014-03-05 17:40:02] 初始化spring容器
+[INFO ][2014-03-05 17:40:02] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@ac44b88: display name [org.springframework.context.support.ClassPathXmlApplicationContext@ac44b88]; startup date [Wed Mar 05 17:40:02 CST 2014]; root of context hierarchy
+[INFO ][2014-03-05 17:40:02] Loading XML bean definitions from class path resource [bean.xml]
+[INFO ][2014-03-05 17:40:02] Bean factory for application context [org.springframework.context.support.ClassPathXmlApplicationContext@ac44b88]: org.springframework.beans.factory.support.DefaultListableBeanFactory@669a4cb
+[INFO ][2014-03-05 17:40:02] Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@669a4cb: defining beans [org.springframework.context.annotation.internalPersistenceAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,XLoginServer,LoginCenter,LoginServerRmi,LoginServerRmiImpl,MainLoginServer,LoginManage,DbProxy,LoginEntityManage,LoginDataSource,LoginSessionFactory]; root of factory hierarchy
+[INFO ][2014-03-05 17:40:03] Looking for RMI registry at port '12004'
+[INFO ][2014-03-05 17:40:04] Could not detect RMI registry - creating new one
+[INFO ][2014-03-05 17:40:05] Binding service 'loginServerRmi' to RMI registry: RegistryImpl[UnicastServerRef [liveRef: [endpoint:[10.6.6.92:12004](local),objID:[0:0:0, 0]]]]
+[INFO ][2014-03-05 17:40:05] MLog clients using log4j logging.
+[INFO ][2014-03-05 17:40:05] Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+[INFO ][2014-03-05 17:40:05] Hibernate Annotations 3.2.1.GA
+[INFO ][2014-03-05 17:40:05] Hibernate 3.2.1
+[INFO ][2014-03-05 17:40:05] hibernate.properties not found
+[INFO ][2014-03-05 17:40:05] Bytecode provider name : cglib
+[INFO ][2014-03-05 17:40:05] using JDK 1.4 java.sql.Timestamp handling
+[INFO ][2014-03-05 17:40:05] Binding entity from annotated class: com.x.db.login.Account
+[INFO ][2014-03-05 17:40:05] Bind entity com.x.db.login.Account on table tb_account
+[INFO ][2014-03-05 17:40:05] Building new Hibernate SessionFactory
+[INFO ][2014-03-05 17:40:05] Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+[INFO ][2014-03-05 17:40:05] Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 1, acquireRetryAttempts -> 60, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 2s4eho9014ehzt3kfztol|79b0d33c, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 2s4eho9014ehzt3kfztol|79b0d33c, idleConnectionTestPeriod -> 0, initialPoolSize -> 2, jdbcUrl -> jdbc:mysql://10.6.6.92:3306/logindb?useUnicode=true&characterEncoding=UTF-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 60, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 10, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 1, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+[INFO ][2014-03-05 17:40:05] RDBMS: MySQL, version: 5.1.34-community
+[INFO ][2014-03-05 17:40:05] JDBC driver: MySQL-AB JDBC Driver, version: mysql-connector-java-5.0.8 ( Revision: ${svn.Revision} )
+[INFO ][2014-03-05 17:40:05] Using dialect: org.hibernate.dialect.MySQLDialect
+[INFO ][2014-03-05 17:40:05] Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+[INFO ][2014-03-05 17:40:05] No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+[INFO ][2014-03-05 17:40:05] Automatic flush during beforeCompletion(): disabled
+[INFO ][2014-03-05 17:40:05] Automatic session close at end of transaction: disabled
+[INFO ][2014-03-05 17:40:05] JDBC batch size: 15
+[INFO ][2014-03-05 17:40:05] JDBC batch updates for versioned data: disabled
+[INFO ][2014-03-05 17:40:05] Scrollable result sets: enabled
+[INFO ][2014-03-05 17:40:05] JDBC3 getGeneratedKeys(): enabled
+[INFO ][2014-03-05 17:40:05] Connection release mode: auto
+[INFO ][2014-03-05 17:40:05] Maximum outer join fetch depth: 2
+[INFO ][2014-03-05 17:40:05] Default batch fetch size: 1
+[INFO ][2014-03-05 17:40:05] Generate SQL with comments: disabled
+[INFO ][2014-03-05 17:40:05] Order SQL updates by primary key: disabled
+[INFO ][2014-03-05 17:40:05] Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+[INFO ][2014-03-05 17:40:05] Using ASTQueryTranslatorFactory
+[INFO ][2014-03-05 17:40:05] Query language substitutions: {}
+[INFO ][2014-03-05 17:40:05] JPA-QL strict compliance: disabled
+[INFO ][2014-03-05 17:40:05] Second-level cache: enabled
+[INFO ][2014-03-05 17:40:05] Query cache: disabled
+[INFO ][2014-03-05 17:40:05] Cache provider: org.hibernate.cache.NoCacheProvider
+[INFO ][2014-03-05 17:40:05] Optimize cache for minimal puts: disabled
+[INFO ][2014-03-05 17:40:05] Structured second-level cache entries: disabled
+[INFO ][2014-03-05 17:40:05] Statistics: disabled
+[INFO ][2014-03-05 17:40:05] Deleted entity synthetic identifier rollback: disabled
+[INFO ][2014-03-05 17:40:05] Default entity-mode: pojo
+[INFO ][2014-03-05 17:40:05] building session factory
+[INFO ][2014-03-05 17:40:05] Not binding factory to JNDI, no JNDI name configured
+[INFO ][2014-03-05 17:40:05] 登陆服务器socketserver已经启动，端口是 12005
+[INFO ][2014-03-05 17:40:05] ****服务器平台:1
+[INFO ][2014-03-05 17:40:05] 服务器已经已经启动:Wed Mar 05 17:40:05 CST 2014
+[INFO ][2014-03-05 17:40:48] --玩家断开连接:未产生任何操作,ip:/10.6.6.92:58601
+[INFO ][2014-03-05 17:41:05] --玩家断开连接:未产生任何操作,ip:/10.6.6.92:58602
+[INFO ][2014-03-05 17:41:16] --玩家断开连接:未产生任何操作,ip:/10.6.6.92:58603
+[INFO ][2014-03-05 17:43:08] --玩家断开连接:未产生任何操作,ip:/10.6.6.92:58624
+[INFO ][2014-03-05 17:43:57] --玩家断开连接:未产生任何操作,ip:/10.6.6.92:58636
+[INFO ][2014-03-05 17:44:55] --玩家断开连接:未产生任何操作,ip:/10.6.6.92:58643
+[INFO ][2014-03-05 18:29:06] 初始化spring容器
+[INFO ][2014-03-05 18:29:07] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@97e121c: display name [org.springframework.context.support.ClassPathXmlApplicationContext@97e121c]; startup date [Wed Mar 05 18:29:07 CST 2014]; root of context hierarchy
+[INFO ][2014-03-05 18:29:07] Loading XML bean definitions from class path resource [bean.xml]
+[INFO ][2014-03-05 18:29:07] Bean factory for application context [org.springframework.context.support.ClassPathXmlApplicationContext@97e121c]: org.springframework.beans.factory.support.DefaultListableBeanFactory@5c3a835d
+[INFO ][2014-03-05 18:29:07] Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@5c3a835d: defining beans [org.springframework.context.annotation.internalPersistenceAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,XLoginServer,LoginCenter,LoginServerRmi,LoginServerRmiImpl,MainLoginServer,LoginManage,DbProxy,LoginEntityManage,LoginDataSource,LoginSessionFactory]; root of factory hierarchy
+[INFO ][2014-03-05 18:29:08] Looking for RMI registry at port '12004'
+[INFO ][2014-03-05 18:29:09] Could not detect RMI registry - creating new one
+[INFO ][2014-03-05 18:29:09] Binding service 'loginServerRmi' to RMI registry: RegistryImpl[UnicastServerRef [liveRef: [endpoint:[10.6.6.92:12004](local),objID:[0:0:0, 0]]]]
+[INFO ][2014-03-05 18:29:09] MLog clients using log4j logging.
+[INFO ][2014-03-05 18:29:09] Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+[INFO ][2014-03-05 18:29:09] Hibernate Annotations 3.2.1.GA
+[INFO ][2014-03-05 18:29:10] Hibernate 3.2.1
+[INFO ][2014-03-05 18:29:10] hibernate.properties not found
+[INFO ][2014-03-05 18:29:10] Bytecode provider name : cglib
+[INFO ][2014-03-05 18:29:10] using JDK 1.4 java.sql.Timestamp handling
+[INFO ][2014-03-05 18:29:10] Binding entity from annotated class: com.x.db.login.Account
+[INFO ][2014-03-05 18:29:10] Bind entity com.x.db.login.Account on table tb_account
+[INFO ][2014-03-05 18:29:10] Building new Hibernate SessionFactory
+[INFO ][2014-03-05 18:29:10] Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+[INFO ][2014-03-05 18:29:10] Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 1, acquireRetryAttempts -> 60, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 2s4eho9014g93zvgrp7yo|79b0d33c, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 2s4eho9014g93zvgrp7yo|79b0d33c, idleConnectionTestPeriod -> 0, initialPoolSize -> 2, jdbcUrl -> jdbc:mysql://10.6.6.92:3306/logindb?useUnicode=true&characterEncoding=UTF-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 60, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 10, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 1, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+[INFO ][2014-03-05 18:29:10] RDBMS: MySQL, version: 5.1.34-community
+[INFO ][2014-03-05 18:29:10] JDBC driver: MySQL-AB JDBC Driver, version: mysql-connector-java-5.0.8 ( Revision: ${svn.Revision} )
+[INFO ][2014-03-05 18:29:10] Using dialect: org.hibernate.dialect.MySQLDialect
+[INFO ][2014-03-05 18:29:10] Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+[INFO ][2014-03-05 18:29:10] No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+[INFO ][2014-03-05 18:29:10] Automatic flush during beforeCompletion(): disabled
+[INFO ][2014-03-05 18:29:10] Automatic session close at end of transaction: disabled
+[INFO ][2014-03-05 18:29:10] JDBC batch size: 15
+[INFO ][2014-03-05 18:29:10] JDBC batch updates for versioned data: disabled
+[INFO ][2014-03-05 18:29:10] Scrollable result sets: enabled
+[INFO ][2014-03-05 18:29:10] JDBC3 getGeneratedKeys(): enabled
+[INFO ][2014-03-05 18:29:10] Connection release mode: auto
+[INFO ][2014-03-05 18:29:10] Maximum outer join fetch depth: 2
+[INFO ][2014-03-05 18:29:10] Default batch fetch size: 1
+[INFO ][2014-03-05 18:29:10] Generate SQL with comments: disabled
+[INFO ][2014-03-05 18:29:10] Order SQL updates by primary key: disabled
+[INFO ][2014-03-05 18:29:10] Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+[INFO ][2014-03-05 18:29:10] Using ASTQueryTranslatorFactory
+[INFO ][2014-03-05 18:29:10] Query language substitutions: {}
+[INFO ][2014-03-05 18:29:10] JPA-QL strict compliance: disabled
+[INFO ][2014-03-05 18:29:10] Second-level cache: enabled
+[INFO ][2014-03-05 18:29:10] Query cache: disabled
+[INFO ][2014-03-05 18:29:10] Cache provider: org.hibernate.cache.NoCacheProvider
+[INFO ][2014-03-05 18:29:10] Optimize cache for minimal puts: disabled
+[INFO ][2014-03-05 18:29:10] Structured second-level cache entries: disabled
+[INFO ][2014-03-05 18:29:10] Statistics: disabled
+[INFO ][2014-03-05 18:29:10] Deleted entity synthetic identifier rollback: disabled
+[INFO ][2014-03-05 18:29:10] Default entity-mode: pojo
+[INFO ][2014-03-05 18:29:10] building session factory
+[INFO ][2014-03-05 18:29:10] Not binding factory to JNDI, no JNDI name configured
+[INFO ][2014-03-05 18:29:10] 登陆服务器socketserver已经启动，端口是 12005
+[INFO ][2014-03-05 18:29:10] ****服务器平台:1
+[INFO ][2014-03-05 18:29:10] 服务器已经已经启动:Wed Mar 05 18:29:10 CST 2014
+[INFO ][2014-03-05 18:30:16] 初始化spring容器
+[INFO ][2014-03-05 18:30:16] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@379e8f17: display name [org.springframework.context.support.ClassPathXmlApplicationContext@379e8f17]; startup date [Wed Mar 05 18:30:16 CST 2014]; root of context hierarchy
+[INFO ][2014-03-05 18:30:16] Loading XML bean definitions from class path resource [bean.xml]
+[INFO ][2014-03-05 18:30:16] Bean factory for application context [org.springframework.context.support.ClassPathXmlApplicationContext@379e8f17]: org.springframework.beans.factory.support.DefaultListableBeanFactory@6179d854
+[INFO ][2014-03-05 18:30:16] Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@6179d854: defining beans [org.springframework.context.annotation.internalPersistenceAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,XLoginServer,LoginCenter,LoginServerRmi,LoginServerRmiImpl,MainLoginServer,LoginManage,DbProxy,LoginEntityManage,LoginDataSource,LoginSessionFactory]; root of factory hierarchy
+[INFO ][2014-03-05 18:30:18] Looking for RMI registry at port '12004'
+[INFO ][2014-03-05 18:30:19] Could not detect RMI registry - creating new one
+[INFO ][2014-03-05 18:30:19] Binding service 'loginServerRmi' to RMI registry: RegistryImpl[UnicastServerRef [liveRef: [endpoint:[10.6.6.92:12004](local),objID:[0:0:0, 0]]]]
+[INFO ][2014-03-05 18:30:19] MLog clients using log4j logging.
+[INFO ][2014-03-05 18:30:19] Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+[INFO ][2014-03-05 18:30:19] Hibernate Annotations 3.2.1.GA
+[INFO ][2014-03-05 18:30:19] Hibernate 3.2.1
+[INFO ][2014-03-05 18:30:19] hibernate.properties not found
+[INFO ][2014-03-05 18:30:19] Bytecode provider name : cglib
+[INFO ][2014-03-05 18:30:19] using JDK 1.4 java.sql.Timestamp handling
+[INFO ][2014-03-05 18:30:19] Binding entity from annotated class: com.x.db.login.Account
+[INFO ][2014-03-05 18:30:19] Bind entity com.x.db.login.Account on table tb_account
+[INFO ][2014-03-05 18:30:19] Building new Hibernate SessionFactory
+[INFO ][2014-03-05 18:30:19] Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+[INFO ][2014-03-05 18:30:19] Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 1, acquireRetryAttempts -> 60, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 2s4eho9014galm61cqz71h|3be0e954, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 2s4eho9014galm61cqz71h|3be0e954, idleConnectionTestPeriod -> 0, initialPoolSize -> 2, jdbcUrl -> jdbc:mysql://10.6.6.92:3306/logindb?useUnicode=true&characterEncoding=UTF-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 60, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 10, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 1, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+[INFO ][2014-03-05 18:30:19] RDBMS: MySQL, version: 5.1.34-community
+[INFO ][2014-03-05 18:30:19] JDBC driver: MySQL-AB JDBC Driver, version: mysql-connector-java-5.0.8 ( Revision: ${svn.Revision} )
+[INFO ][2014-03-05 18:30:19] Using dialect: org.hibernate.dialect.MySQLDialect
+[INFO ][2014-03-05 18:30:19] Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+[INFO ][2014-03-05 18:30:19] No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+[INFO ][2014-03-05 18:30:19] Automatic flush during beforeCompletion(): disabled
+[INFO ][2014-03-05 18:30:19] Automatic session close at end of transaction: disabled
+[INFO ][2014-03-05 18:30:19] JDBC batch size: 15
+[INFO ][2014-03-05 18:30:19] JDBC batch updates for versioned data: disabled
+[INFO ][2014-03-05 18:30:19] Scrollable result sets: enabled
+[INFO ][2014-03-05 18:30:19] JDBC3 getGeneratedKeys(): enabled
+[INFO ][2014-03-05 18:30:19] Connection release mode: auto
+[INFO ][2014-03-05 18:30:19] Maximum outer join fetch depth: 2
+[INFO ][2014-03-05 18:30:19] Default batch fetch size: 1
+[INFO ][2014-03-05 18:30:19] Generate SQL with comments: disabled
+[INFO ][2014-03-05 18:30:19] Order SQL updates by primary key: disabled
+[INFO ][2014-03-05 18:30:19] Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+[INFO ][2014-03-05 18:30:19] Using ASTQueryTranslatorFactory
+[INFO ][2014-03-05 18:30:19] Query language substitutions: {}
+[INFO ][2014-03-05 18:30:19] JPA-QL strict compliance: disabled
+[INFO ][2014-03-05 18:30:19] Second-level cache: enabled
+[INFO ][2014-03-05 18:30:19] Query cache: disabled
+[INFO ][2014-03-05 18:30:19] Cache provider: org.hibernate.cache.NoCacheProvider
+[INFO ][2014-03-05 18:30:19] Optimize cache for minimal puts: disabled
+[INFO ][2014-03-05 18:30:19] Structured second-level cache entries: disabled
+[INFO ][2014-03-05 18:30:19] Statistics: disabled
+[INFO ][2014-03-05 18:30:19] Deleted entity synthetic identifier rollback: disabled
+[INFO ][2014-03-05 18:30:19] Default entity-mode: pojo
+[INFO ][2014-03-05 18:30:19] building session factory
+[INFO ][2014-03-05 18:30:20] Not binding factory to JNDI, no JNDI name configured
+[INFO ][2014-03-05 18:30:20] 登陆服务器socketserver已经启动，端口是 12005
+[INFO ][2014-03-05 18:30:20] ****服务器平台:1
+[INFO ][2014-03-05 18:30:20] 服务器已经已经启动:Wed Mar 05 18:30:20 CST 2014
+[INFO ][2014-03-05 18:32:12] --玩家断开连接:未产生任何操作,ip:/10.6.6.92:59297
+[INFO ][2014-03-05 18:32:18] 初始化spring容器
+[INFO ][2014-03-05 18:32:18] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@4102799c: display name [org.springframework.context.support.ClassPathXmlApplicationContext@4102799c]; startup date [Wed Mar 05 18:32:18 CST 2014]; root of context hierarchy
+[INFO ][2014-03-05 18:32:18] Loading XML bean definitions from class path resource [bean.xml]
+[INFO ][2014-03-05 18:32:18] Bean factory for application context [org.springframework.context.support.ClassPathXmlApplicationContext@4102799c]: org.springframework.beans.factory.support.DefaultListableBeanFactory@1c20eb7
+[INFO ][2014-03-05 18:32:18] Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@1c20eb7: defining beans [org.springframework.context.annotation.internalPersistenceAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,XLoginServer,LoginCenter,LoginServerRmi,LoginServerRmiImpl,MainLoginServer,LoginManage,DbProxy,LoginEntityManage,LoginDataSource,LoginSessionFactory]; root of factory hierarchy
+[INFO ][2014-03-05 18:32:19] Looking for RMI registry at port '12004'
+[INFO ][2014-03-05 18:32:20] Could not detect RMI registry - creating new one
+[INFO ][2014-03-05 18:32:20] Binding service 'loginServerRmi' to RMI registry: RegistryImpl[UnicastServerRef [liveRef: [endpoint:[10.6.6.92:12004](local),objID:[0:0:0, 0]]]]
+[INFO ][2014-03-05 18:32:20] MLog clients using log4j logging.
+[INFO ][2014-03-05 18:32:20] Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+[INFO ][2014-03-05 18:32:21] Hibernate Annotations 3.2.1.GA
+[INFO ][2014-03-05 18:32:21] Hibernate 3.2.1
+[INFO ][2014-03-05 18:32:21] hibernate.properties not found
+[INFO ][2014-03-05 18:32:21] Bytecode provider name : cglib
+[INFO ][2014-03-05 18:32:21] using JDK 1.4 java.sql.Timestamp handling
+[INFO ][2014-03-05 18:32:21] Binding entity from annotated class: com.x.db.login.Account
+[INFO ][2014-03-05 18:32:21] Bind entity com.x.db.login.Account on table tb_account
+[INFO ][2014-03-05 18:32:21] Building new Hibernate SessionFactory
+[INFO ][2014-03-05 18:32:21] Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+[INFO ][2014-03-05 18:32:21] Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 1, acquireRetryAttempts -> 60, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 2s4eho9014gd7dv1a07oem|27b104d7, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 2s4eho9014gd7dv1a07oem|27b104d7, idleConnectionTestPeriod -> 0, initialPoolSize -> 2, jdbcUrl -> jdbc:mysql://10.6.6.92:3306/logindb?useUnicode=true&characterEncoding=UTF-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 60, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 10, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 1, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+[INFO ][2014-03-05 18:32:21] RDBMS: MySQL, version: 5.1.34-community
+[INFO ][2014-03-05 18:32:21] JDBC driver: MySQL-AB JDBC Driver, version: mysql-connector-java-5.0.8 ( Revision: ${svn.Revision} )
+[INFO ][2014-03-05 18:32:21] Using dialect: org.hibernate.dialect.MySQLDialect
+[INFO ][2014-03-05 18:32:21] Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+[INFO ][2014-03-05 18:32:21] No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+[INFO ][2014-03-05 18:32:21] Automatic flush during beforeCompletion(): disabled
+[INFO ][2014-03-05 18:32:21] Automatic session close at end of transaction: disabled
+[INFO ][2014-03-05 18:32:21] JDBC batch size: 15
+[INFO ][2014-03-05 18:32:21] JDBC batch updates for versioned data: disabled
+[INFO ][2014-03-05 18:32:21] Scrollable result sets: enabled
+[INFO ][2014-03-05 18:32:21] JDBC3 getGeneratedKeys(): enabled
+[INFO ][2014-03-05 18:32:21] Connection release mode: auto
+[INFO ][2014-03-05 18:32:21] Maximum outer join fetch depth: 2
+[INFO ][2014-03-05 18:32:21] Default batch fetch size: 1
+[INFO ][2014-03-05 18:32:21] Generate SQL with comments: disabled
+[INFO ][2014-03-05 18:32:21] Order SQL updates by primary key: disabled
+[INFO ][2014-03-05 18:32:21] Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+[INFO ][2014-03-05 18:32:21] Using ASTQueryTranslatorFactory
+[INFO ][2014-03-05 18:32:21] Query language substitutions: {}
+[INFO ][2014-03-05 18:32:21] JPA-QL strict compliance: disabled
+[INFO ][2014-03-05 18:32:21] Second-level cache: enabled
+[INFO ][2014-03-05 18:32:21] Query cache: disabled
+[INFO ][2014-03-05 18:32:21] Cache provider: org.hibernate.cache.NoCacheProvider
+[INFO ][2014-03-05 18:32:21] Optimize cache for minimal puts: disabled
+[INFO ][2014-03-05 18:32:21] Structured second-level cache entries: disabled
+[INFO ][2014-03-05 18:32:21] Statistics: disabled
+[INFO ][2014-03-05 18:32:21] Deleted entity synthetic identifier rollback: disabled
+[INFO ][2014-03-05 18:32:21] Default entity-mode: pojo
+[INFO ][2014-03-05 18:32:21] building session factory
+[INFO ][2014-03-05 18:32:21] Not binding factory to JNDI, no JNDI name configured
+[INFO ][2014-03-05 18:32:21] 登陆服务器socketserver已经启动，端口是 12005
+[INFO ][2014-03-05 18:32:21] ****服务器平台:1
+[INFO ][2014-03-05 18:32:21] 服务器已经已经启动:Wed Mar 05 18:32:21 CST 2014
+[INFO ][2014-03-05 18:32:31] --玩家断开连接:未产生任何操作,ip:/10.6.6.92:59344
+[INFO ][2014-03-05 18:33:29] 初始化spring容器
+[INFO ][2014-03-05 18:33:29] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@ac44b88: display name [org.springframework.context.support.ClassPathXmlApplicationContext@ac44b88]; startup date [Wed Mar 05 18:33:29 CST 2014]; root of context hierarchy
+[INFO ][2014-03-05 18:33:29] Loading XML bean definitions from class path resource [bean.xml]
+[INFO ][2014-03-05 18:33:29] Bean factory for application context [org.springframework.context.support.ClassPathXmlApplicationContext@ac44b88]: org.springframework.beans.factory.support.DefaultListableBeanFactory@669a4cb
+[INFO ][2014-03-05 18:33:29] Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@669a4cb: defining beans [org.springframework.context.annotation.internalPersistenceAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,XLoginServer,LoginCenter,LoginServerRmi,LoginServerRmiImpl,MainLoginServer,LoginManage,DbProxy,LoginEntityManage,LoginDataSource,LoginSessionFactory]; root of factory hierarchy
+[INFO ][2014-03-05 18:33:31] Looking for RMI registry at port '12004'
+[INFO ][2014-03-05 18:33:32] Could not detect RMI registry - creating new one
+[INFO ][2014-03-05 18:33:32] Binding service 'loginServerRmi' to RMI registry: RegistryImpl[UnicastServerRef [liveRef: [endpoint:[10.6.6.92:12004](local),objID:[0:0:0, 0]]]]
+[INFO ][2014-03-05 18:33:32] MLog clients using log4j logging.
+[INFO ][2014-03-05 18:33:32] Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+[INFO ][2014-03-05 18:33:32] Hibernate Annotations 3.2.1.GA
+[INFO ][2014-03-05 18:33:32] Hibernate 3.2.1
+[INFO ][2014-03-05 18:33:32] hibernate.properties not found
+[INFO ][2014-03-05 18:33:32] Bytecode provider name : cglib
+[INFO ][2014-03-05 18:33:32] using JDK 1.4 java.sql.Timestamp handling
+[INFO ][2014-03-05 18:33:32] Binding entity from annotated class: com.x.db.login.Account
+[INFO ][2014-03-05 18:33:32] Bind entity com.x.db.login.Account on table tb_account
+[INFO ][2014-03-05 18:33:32] Building new Hibernate SessionFactory
+[INFO ][2014-03-05 18:33:32] Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+[INFO ][2014-03-05 18:33:32] Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 1, acquireRetryAttempts -> 60, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 2s4eho9014geqi1bym2dq|56b4d39c, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 2s4eho9014geqi1bym2dq|56b4d39c, idleConnectionTestPeriod -> 0, initialPoolSize -> 2, jdbcUrl -> jdbc:mysql://10.6.6.92:3306/logindb?useUnicode=true&characterEncoding=UTF-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 60, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 10, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 1, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+[INFO ][2014-03-05 18:33:32] RDBMS: MySQL, version: 5.1.34-community
+[INFO ][2014-03-05 18:33:32] JDBC driver: MySQL-AB JDBC Driver, version: mysql-connector-java-5.0.8 ( Revision: ${svn.Revision} )
+[INFO ][2014-03-05 18:33:32] Using dialect: org.hibernate.dialect.MySQLDialect
+[INFO ][2014-03-05 18:33:32] Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+[INFO ][2014-03-05 18:33:32] No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+[INFO ][2014-03-05 18:33:32] Automatic flush during beforeCompletion(): disabled
+[INFO ][2014-03-05 18:33:32] Automatic session close at end of transaction: disabled
+[INFO ][2014-03-05 18:33:32] JDBC batch size: 15
+[INFO ][2014-03-05 18:33:32] JDBC batch updates for versioned data: disabled
+[INFO ][2014-03-05 18:33:32] Scrollable result sets: enabled
+[INFO ][2014-03-05 18:33:32] JDBC3 getGeneratedKeys(): enabled
+[INFO ][2014-03-05 18:33:32] Connection release mode: auto
+[INFO ][2014-03-05 18:33:32] Maximum outer join fetch depth: 2
+[INFO ][2014-03-05 18:33:32] Default batch fetch size: 1
+[INFO ][2014-03-05 18:33:32] Generate SQL with comments: disabled
+[INFO ][2014-03-05 18:33:32] Order SQL updates by primary key: disabled
+[INFO ][2014-03-05 18:33:32] Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+[INFO ][2014-03-05 18:33:32] Using ASTQueryTranslatorFactory
+[INFO ][2014-03-05 18:33:32] Query language substitutions: {}
+[INFO ][2014-03-05 18:33:32] JPA-QL strict compliance: disabled
+[INFO ][2014-03-05 18:33:32] Second-level cache: enabled
+[INFO ][2014-03-05 18:33:32] Query cache: disabled
+[INFO ][2014-03-05 18:33:32] Cache provider: org.hibernate.cache.NoCacheProvider
+[INFO ][2014-03-05 18:33:32] Optimize cache for minimal puts: disabled
+[INFO ][2014-03-05 18:33:32] Structured second-level cache entries: disabled
+[INFO ][2014-03-05 18:33:32] Statistics: disabled
+[INFO ][2014-03-05 18:33:32] Deleted entity synthetic identifier rollback: disabled
+[INFO ][2014-03-05 18:33:32] Default entity-mode: pojo
+[INFO ][2014-03-05 18:33:32] building session factory
+[INFO ][2014-03-05 18:33:33] Not binding factory to JNDI, no JNDI name configured
+[INFO ][2014-03-05 18:33:33] 登陆服务器socketserver已经启动，端口是 12005
+[INFO ][2014-03-05 18:33:33] ****服务器平台:1
+[INFO ][2014-03-05 18:33:33] 服务器已经已经启动:Wed Mar 05 18:33:33 CST 2014
+[INFO ][2014-03-05 18:36:43] 初始化spring容器
+[INFO ][2014-03-05 18:36:43] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@ac44b88: display name [org.springframework.context.support.ClassPathXmlApplicationContext@ac44b88]; startup date [Wed Mar 05 18:36:43 CST 2014]; root of context hierarchy
+[INFO ][2014-03-05 18:36:43] Loading XML bean definitions from class path resource [bean.xml]
+[INFO ][2014-03-05 18:36:43] Bean factory for application context [org.springframework.context.support.ClassPathXmlApplicationContext@ac44b88]: org.springframework.beans.factory.support.DefaultListableBeanFactory@5c4b82d2
+[INFO ][2014-03-05 18:36:43] Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@5c4b82d2: defining beans [org.springframework.context.annotation.internalPersistenceAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,XLoginServer,LoginCenter,LoginServerRmi,LoginServerRmiImpl,MainLoginServer,LoginManage,DbProxy,LoginEntityManage,LoginDataSource,LoginSessionFactory]; root of factory hierarchy
+[INFO ][2014-03-05 18:36:45] Looking for RMI registry at port '12004'
+[INFO ][2014-03-05 18:36:46] Could not detect RMI registry - creating new one
+[INFO ][2014-03-05 18:36:46] Binding service 'loginServerRmi' to RMI registry: RegistryImpl[UnicastServerRef [liveRef: [endpoint:[10.6.6.92:12004](local),objID:[0:0:0, 0]]]]
+[INFO ][2014-03-05 18:36:46] MLog clients using log4j logging.
+[INFO ][2014-03-05 18:36:46] Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+[INFO ][2014-03-05 18:36:46] Hibernate Annotations 3.2.1.GA
+[INFO ][2014-03-05 18:36:46] Hibernate 3.2.1
+[INFO ][2014-03-05 18:36:46] hibernate.properties not found
+[INFO ][2014-03-05 18:36:46] Bytecode provider name : cglib
+[INFO ][2014-03-05 18:36:46] using JDK 1.4 java.sql.Timestamp handling
+[INFO ][2014-03-05 18:36:46] Binding entity from annotated class: com.x.db.login.Account
+[INFO ][2014-03-05 18:36:46] Bind entity com.x.db.login.Account on table tb_account
+[INFO ][2014-03-05 18:36:46] Building new Hibernate SessionFactory
+[INFO ][2014-03-05 18:36:46] Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+[INFO ][2014-03-05 18:36:46] Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 1, acquireRetryAttempts -> 60, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 2s4eho9014giw7c1ny466a|2af6a882, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 2s4eho9014giw7c1ny466a|2af6a882, idleConnectionTestPeriod -> 0, initialPoolSize -> 2, jdbcUrl -> jdbc:mysql://10.6.6.92:3306/logindb?useUnicode=true&characterEncoding=UTF-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 60, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 10, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 1, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+[INFO ][2014-03-05 18:36:46] RDBMS: MySQL, version: 5.1.34-community
+[INFO ][2014-03-05 18:36:46] JDBC driver: MySQL-AB JDBC Driver, version: mysql-connector-java-5.0.8 ( Revision: ${svn.Revision} )
+[INFO ][2014-03-05 18:36:46] Using dialect: org.hibernate.dialect.MySQLDialect
+[INFO ][2014-03-05 18:36:46] Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+[INFO ][2014-03-05 18:36:46] No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+[INFO ][2014-03-05 18:36:46] Automatic flush during beforeCompletion(): disabled
+[INFO ][2014-03-05 18:36:46] Automatic session close at end of transaction: disabled
+[INFO ][2014-03-05 18:36:46] JDBC batch size: 15
+[INFO ][2014-03-05 18:36:46] JDBC batch updates for versioned data: disabled
+[INFO ][2014-03-05 18:36:46] Scrollable result sets: enabled
+[INFO ][2014-03-05 18:36:46] JDBC3 getGeneratedKeys(): enabled
+[INFO ][2014-03-05 18:36:46] Connection release mode: auto
+[INFO ][2014-03-05 18:36:46] Maximum outer join fetch depth: 2
+[INFO ][2014-03-05 18:36:46] Default batch fetch size: 1
+[INFO ][2014-03-05 18:36:46] Generate SQL with comments: disabled
+[INFO ][2014-03-05 18:36:46] Order SQL updates by primary key: disabled
+[INFO ][2014-03-05 18:36:46] Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+[INFO ][2014-03-05 18:36:46] Using ASTQueryTranslatorFactory
+[INFO ][2014-03-05 18:36:46] Query language substitutions: {}
+[INFO ][2014-03-05 18:36:46] JPA-QL strict compliance: disabled
+[INFO ][2014-03-05 18:36:46] Second-level cache: enabled
+[INFO ][2014-03-05 18:36:46] Query cache: disabled
+[INFO ][2014-03-05 18:36:46] Cache provider: org.hibernate.cache.NoCacheProvider
+[INFO ][2014-03-05 18:36:46] Optimize cache for minimal puts: disabled
+[INFO ][2014-03-05 18:36:46] Structured second-level cache entries: disabled
+[INFO ][2014-03-05 18:36:46] Statistics: disabled
+[INFO ][2014-03-05 18:36:46] Deleted entity synthetic identifier rollback: disabled
+[INFO ][2014-03-05 18:36:46] Default entity-mode: pojo
+[INFO ][2014-03-05 18:36:46] building session factory
+[INFO ][2014-03-05 18:36:47] Not binding factory to JNDI, no JNDI name configured
+[INFO ][2014-03-05 18:36:47] 登陆服务器socketserver已经启动，端口是 12005
+[INFO ][2014-03-05 18:36:47] ****服务器平台:1
+[INFO ][2014-03-05 18:36:47] 服务器已经已经启动:Wed Mar 05 18:36:47 CST 2014
+[INFO ][2014-03-05 18:37:14] --玩家断开连接:未产生任何操作,ip:/10.6.6.92:59430
+[INFO ][2014-03-05 18:43:48] 初始化spring容器
+[INFO ][2014-03-05 18:43:48] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@379e8f17: display name [org.springframework.context.support.ClassPathXmlApplicationContext@379e8f17]; startup date [Wed Mar 05 18:43:48 CST 2014]; root of context hierarchy
+[INFO ][2014-03-05 18:43:48] Loading XML bean definitions from class path resource [bean.xml]
+[INFO ][2014-03-05 18:43:48] Bean factory for application context [org.springframework.context.support.ClassPathXmlApplicationContext@379e8f17]: org.springframework.beans.factory.support.DefaultListableBeanFactory@5c4b82d2
+[INFO ][2014-03-05 18:43:48] Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@5c4b82d2: defining beans [org.springframework.context.annotation.internalPersistenceAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,XLoginServer,LoginCenter,LoginServerRmi,LoginServerRmiImpl,MainLoginServer,LoginManage,DbProxy,LoginEntityManage,LoginDataSource,LoginSessionFactory]; root of factory hierarchy
+[INFO ][2014-03-05 18:43:50] Looking for RMI registry at port '12004'
+[INFO ][2014-03-05 18:43:51] Could not detect RMI registry - creating new one
+[INFO ][2014-03-05 18:43:51] Binding service 'loginServerRmi' to RMI registry: RegistryImpl[UnicastServerRef [liveRef: [endpoint:[10.6.6.92:12004](local),objID:[0:0:0, 0]]]]
+[INFO ][2014-03-05 18:43:51] MLog clients using log4j logging.
+[INFO ][2014-03-05 18:43:51] Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+[INFO ][2014-03-05 18:43:51] Hibernate Annotations 3.2.1.GA
+[INFO ][2014-03-05 18:43:51] Hibernate 3.2.1
+[INFO ][2014-03-05 18:43:51] hibernate.properties not found
+[INFO ][2014-03-05 18:43:51] Bytecode provider name : cglib
+[INFO ][2014-03-05 18:43:51] using JDK 1.4 java.sql.Timestamp handling
+[INFO ][2014-03-05 18:43:51] Binding entity from annotated class: com.x.db.login.Account
+[INFO ][2014-03-05 18:43:51] Bind entity com.x.db.login.Account on table tb_account
+[INFO ][2014-03-05 18:43:51] Building new Hibernate SessionFactory
+[INFO ][2014-03-05 18:43:51] Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+[INFO ][2014-03-05 18:43:51] Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 1, acquireRetryAttempts -> 60, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 2s4eho9014gs0102v2xjc|2c1450bd, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 2s4eho9014gs0102v2xjc|2c1450bd, idleConnectionTestPeriod -> 0, initialPoolSize -> 2, jdbcUrl -> jdbc:mysql://10.6.6.92:3306/logindb?useUnicode=true&characterEncoding=UTF-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 60, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 10, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 1, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+[INFO ][2014-03-05 18:43:51] RDBMS: MySQL, version: 5.1.34-community
+[INFO ][2014-03-05 18:43:51] JDBC driver: MySQL-AB JDBC Driver, version: mysql-connector-java-5.0.8 ( Revision: ${svn.Revision} )
+[INFO ][2014-03-05 18:43:51] Using dialect: org.hibernate.dialect.MySQLDialect
+[INFO ][2014-03-05 18:43:51] Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+[INFO ][2014-03-05 18:43:51] No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+[INFO ][2014-03-05 18:43:51] Automatic flush during beforeCompletion(): disabled
+[INFO ][2014-03-05 18:43:51] Automatic session close at end of transaction: disabled
+[INFO ][2014-03-05 18:43:51] JDBC batch size: 15
+[INFO ][2014-03-05 18:43:51] JDBC batch updates for versioned data: disabled
+[INFO ][2014-03-05 18:43:51] Scrollable result sets: enabled
+[INFO ][2014-03-05 18:43:51] JDBC3 getGeneratedKeys(): enabled
+[INFO ][2014-03-05 18:43:51] Connection release mode: auto
+[INFO ][2014-03-05 18:43:51] Maximum outer join fetch depth: 2
+[INFO ][2014-03-05 18:43:51] Default batch fetch size: 1
+[INFO ][2014-03-05 18:43:51] Generate SQL with comments: disabled
+[INFO ][2014-03-05 18:43:51] Order SQL updates by primary key: disabled
+[INFO ][2014-03-05 18:43:51] Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+[INFO ][2014-03-05 18:43:51] Using ASTQueryTranslatorFactory
+[INFO ][2014-03-05 18:43:51] Query language substitutions: {}
+[INFO ][2014-03-05 18:43:51] JPA-QL strict compliance: disabled
+[INFO ][2014-03-05 18:43:51] Second-level cache: enabled
+[INFO ][2014-03-05 18:43:51] Query cache: disabled
+[INFO ][2014-03-05 18:43:51] Cache provider: org.hibernate.cache.NoCacheProvider
+[INFO ][2014-03-05 18:43:51] Optimize cache for minimal puts: disabled
+[INFO ][2014-03-05 18:43:51] Structured second-level cache entries: disabled
+[INFO ][2014-03-05 18:43:51] Statistics: disabled
+[INFO ][2014-03-05 18:43:51] Deleted entity synthetic identifier rollback: disabled
+[INFO ][2014-03-05 18:43:51] Default entity-mode: pojo
+[INFO ][2014-03-05 18:43:51] building session factory
+[INFO ][2014-03-05 18:43:51] Not binding factory to JNDI, no JNDI name configured
+[INFO ][2014-03-05 18:43:52] 登陆服务器socketserver已经启动，端口是 12005
+[INFO ][2014-03-05 18:43:52] ****服务器平台:1
+[INFO ][2014-03-05 18:43:52] 服务器已经已经启动:Wed Mar 05 18:43:52 CST 2014
+[INFO ][2014-03-05 18:44:12] --玩家断开连接:未产生任何操作,ip:/10.6.6.92:59532
+[INFO ][2014-03-05 18:51:12] 初始化spring容器
+[INFO ][2014-03-05 18:51:12] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5d3ad33d: display name [org.springframework.context.support.ClassPathXmlApplicationContext@5d3ad33d]; startup date [Wed Mar 05 18:51:12 CST 2014]; root of context hierarchy
+[INFO ][2014-03-05 18:51:13] Loading XML bean definitions from class path resource [bean.xml]
+[INFO ][2014-03-05 18:51:13] Bean factory for application context [org.springframework.context.support.ClassPathXmlApplicationContext@5d3ad33d]: org.springframework.beans.factory.support.DefaultListableBeanFactory@6179d854
+[INFO ][2014-03-05 18:51:13] Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@6179d854: defining beans [org.springframework.context.annotation.internalPersistenceAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,XLoginServer,LoginCenter,LoginServerRmi,LoginServerRmiImpl,MainLoginServer,LoginManage,DbProxy,LoginEntityManage,LoginDataSource,LoginSessionFactory]; root of factory hierarchy
+[INFO ][2014-03-05 18:51:14] Looking for RMI registry at port '12004'
+[INFO ][2014-03-05 18:51:15] Could not detect RMI registry - creating new one
+[INFO ][2014-03-05 18:51:15] Binding service 'loginServerRmi' to RMI registry: RegistryImpl[UnicastServerRef [liveRef: [endpoint:[10.6.6.92:12004](local),objID:[0:0:0, 0]]]]
+[INFO ][2014-03-05 18:51:15] MLog clients using log4j logging.
+[INFO ][2014-03-05 18:51:15] Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+[INFO ][2014-03-05 18:51:15] Hibernate Annotations 3.2.1.GA
+[INFO ][2014-03-05 18:51:15] Hibernate 3.2.1
+[INFO ][2014-03-05 18:51:15] hibernate.properties not found
+[INFO ][2014-03-05 18:51:15] Bytecode provider name : cglib
+[INFO ][2014-03-05 18:51:15] using JDK 1.4 java.sql.Timestamp handling
+[INFO ][2014-03-05 18:51:15] Binding entity from annotated class: com.x.db.login.Account
+[INFO ][2014-03-05 18:51:15] Bind entity com.x.db.login.Account on table tb_account
+[INFO ][2014-03-05 18:51:16] Building new Hibernate SessionFactory
+[INFO ][2014-03-05 18:51:16] Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+[INFO ][2014-03-05 18:51:16] Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 1, acquireRetryAttempts -> 60, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 2s4eho9014h1j0y1fyou3c|69c0bee6, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 2s4eho9014h1j0y1fyou3c|69c0bee6, idleConnectionTestPeriod -> 0, initialPoolSize -> 2, jdbcUrl -> jdbc:mysql://10.6.6.92:3306/logindb?useUnicode=true&characterEncoding=UTF-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 60, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 10, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 1, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+[INFO ][2014-03-05 18:51:16] RDBMS: MySQL, version: 5.1.34-community
+[INFO ][2014-03-05 18:51:16] JDBC driver: MySQL-AB JDBC Driver, version: mysql-connector-java-5.0.8 ( Revision: ${svn.Revision} )
+[INFO ][2014-03-05 18:51:16] Using dialect: org.hibernate.dialect.MySQLDialect
+[INFO ][2014-03-05 18:51:16] Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+[INFO ][2014-03-05 18:51:16] No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+[INFO ][2014-03-05 18:51:16] Automatic flush during beforeCompletion(): disabled
+[INFO ][2014-03-05 18:51:16] Automatic session close at end of transaction: disabled
+[INFO ][2014-03-05 18:51:16] JDBC batch size: 15
+[INFO ][2014-03-05 18:51:16] JDBC batch updates for versioned data: disabled
+[INFO ][2014-03-05 18:51:16] Scrollable result sets: enabled
+[INFO ][2014-03-05 18:51:16] JDBC3 getGeneratedKeys(): enabled
+[INFO ][2014-03-05 18:51:16] Connection release mode: auto
+[INFO ][2014-03-05 18:51:16] Maximum outer join fetch depth: 2
+[INFO ][2014-03-05 18:51:16] Default batch fetch size: 1
+[INFO ][2014-03-05 18:51:16] Generate SQL with comments: disabled
+[INFO ][2014-03-05 18:51:16] Order SQL updates by primary key: disabled
+[INFO ][2014-03-05 18:51:16] Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+[INFO ][2014-03-05 18:51:16] Using ASTQueryTranslatorFactory
+[INFO ][2014-03-05 18:51:16] Query language substitutions: {}
+[INFO ][2014-03-05 18:51:16] JPA-QL strict compliance: disabled
+[INFO ][2014-03-05 18:51:16] Second-level cache: enabled
+[INFO ][2014-03-05 18:51:16] Query cache: disabled
+[INFO ][2014-03-05 18:51:16] Cache provider: org.hibernate.cache.NoCacheProvider
+[INFO ][2014-03-05 18:51:16] Optimize cache for minimal puts: disabled
+[INFO ][2014-03-05 18:51:16] Structured second-level cache entries: disabled
+[INFO ][2014-03-05 18:51:16] Statistics: disabled
+[INFO ][2014-03-05 18:51:16] Deleted entity synthetic identifier rollback: disabled
+[INFO ][2014-03-05 18:51:16] Default entity-mode: pojo
+[INFO ][2014-03-05 18:51:16] building session factory
+[INFO ][2014-03-05 18:51:16] Not binding factory to JNDI, no JNDI name configured
+[INFO ][2014-03-05 18:51:16] 登陆服务器socketserver已经启动，端口是 12005
+[INFO ][2014-03-05 18:51:16] ****服务器平台:1
+[INFO ][2014-03-05 18:51:16] 服务器已经已经启动:Wed Mar 05 18:51:16 CST 2014
+[INFO ][2014-03-05 18:55:13] 初始化spring容器
+[INFO ][2014-03-05 18:55:14] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@ac44b88: display name [org.springframework.context.support.ClassPathXmlApplicationContext@ac44b88]; startup date [Wed Mar 05 18:55:14 CST 2014]; root of context hierarchy
+[INFO ][2014-03-05 18:55:14] Loading XML bean definitions from class path resource [bean.xml]
+[INFO ][2014-03-05 18:55:14] Bean factory for application context [org.springframework.context.support.ClassPathXmlApplicationContext@ac44b88]: org.springframework.beans.factory.support.DefaultListableBeanFactory@669a4cb
+[INFO ][2014-03-05 18:55:14] Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@669a4cb: defining beans [org.springframework.context.annotation.internalPersistenceAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,XLoginServer,LoginCenter,LoginServerRmi,LoginServerRmiImpl,MainLoginServer,LoginManage,DbProxy,LoginEntityManage,LoginDataSource,LoginSessionFactory]; root of factory hierarchy
+[INFO ][2014-03-05 18:55:15] Looking for RMI registry at port '12004'
+[INFO ][2014-03-05 18:55:16] Could not detect RMI registry - creating new one
+[INFO ][2014-03-05 18:55:16] Binding service 'loginServerRmi' to RMI registry: RegistryImpl[UnicastServerRef [liveRef: [endpoint:[10.6.6.92:12004](local),objID:[0:0:0, 0]]]]
+[INFO ][2014-03-05 18:55:16] MLog clients using log4j logging.
+[INFO ][2014-03-05 18:55:16] Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+[INFO ][2014-03-05 18:55:16] Hibernate Annotations 3.2.1.GA
+[INFO ][2014-03-05 18:55:16] Hibernate 3.2.1
+[INFO ][2014-03-05 18:55:16] hibernate.properties not found
+[INFO ][2014-03-05 18:55:16] Bytecode provider name : cglib
+[INFO ][2014-03-05 18:55:16] using JDK 1.4 java.sql.Timestamp handling
+[INFO ][2014-03-05 18:55:17] Binding entity from annotated class: com.x.db.login.Account
+[INFO ][2014-03-05 18:55:17] Bind entity com.x.db.login.Account on table tb_account
+[INFO ][2014-03-05 18:55:17] Building new Hibernate SessionFactory
+[INFO ][2014-03-05 18:55:17] Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+[INFO ][2014-03-05 18:55:17] Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 1, acquireRetryAttempts -> 60, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 2s4eho9014h6p1t84m4co|4413515e, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 2s4eho9014h6p1t84m4co|4413515e, idleConnectionTestPeriod -> 0, initialPoolSize -> 2, jdbcUrl -> jdbc:mysql://10.6.6.92:3306/logindb?useUnicode=true&characterEncoding=UTF-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 60, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 10, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 1, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+[INFO ][2014-03-05 18:55:17] RDBMS: MySQL, version: 5.1.34-community
+[INFO ][2014-03-05 18:55:17] JDBC driver: MySQL-AB JDBC Driver, version: mysql-connector-java-5.0.8 ( Revision: ${svn.Revision} )
+[INFO ][2014-03-05 18:55:17] Using dialect: org.hibernate.dialect.MySQLDialect
+[INFO ][2014-03-05 18:55:17] Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+[INFO ][2014-03-05 18:55:17] No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+[INFO ][2014-03-05 18:55:17] Automatic flush during beforeCompletion(): disabled
+[INFO ][2014-03-05 18:55:17] Automatic session close at end of transaction: disabled
+[INFO ][2014-03-05 18:55:17] JDBC batch size: 15
+[INFO ][2014-03-05 18:55:17] JDBC batch updates for versioned data: disabled
+[INFO ][2014-03-05 18:55:17] Scrollable result sets: enabled
+[INFO ][2014-03-05 18:55:17] JDBC3 getGeneratedKeys(): enabled
+[INFO ][2014-03-05 18:55:17] Connection release mode: auto
+[INFO ][2014-03-05 18:55:17] Maximum outer join fetch depth: 2
+[INFO ][2014-03-05 18:55:17] Default batch fetch size: 1
+[INFO ][2014-03-05 18:55:17] Generate SQL with comments: disabled
+[INFO ][2014-03-05 18:55:17] Order SQL updates by primary key: disabled
+[INFO ][2014-03-05 18:55:17] Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+[INFO ][2014-03-05 18:55:17] Using ASTQueryTranslatorFactory
+[INFO ][2014-03-05 18:55:17] Query language substitutions: {}
+[INFO ][2014-03-05 18:55:17] JPA-QL strict compliance: disabled
+[INFO ][2014-03-05 18:55:17] Second-level cache: enabled
+[INFO ][2014-03-05 18:55:17] Query cache: disabled
+[INFO ][2014-03-05 18:55:17] Cache provider: org.hibernate.cache.NoCacheProvider
+[INFO ][2014-03-05 18:55:17] Optimize cache for minimal puts: disabled
+[INFO ][2014-03-05 18:55:17] Structured second-level cache entries: disabled
+[INFO ][2014-03-05 18:55:17] Statistics: disabled
+[INFO ][2014-03-05 18:55:17] Deleted entity synthetic identifier rollback: disabled
+[INFO ][2014-03-05 18:55:17] Default entity-mode: pojo
+[INFO ][2014-03-05 18:55:17] building session factory
+[INFO ][2014-03-05 18:55:17] Not binding factory to JNDI, no JNDI name configured
+[INFO ][2014-03-05 18:55:17] 登陆服务器socketserver已经启动，端口是 12005
+[INFO ][2014-03-05 18:55:17] ****服务器平台:1
+[INFO ][2014-03-05 18:55:17] 服务器已经已经启动:Wed Mar 05 18:55:17 CST 2014
+[INFO ][2014-03-05 18:56:27] 初始化spring容器
+[INFO ][2014-03-05 18:56:27] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@33d6f122: display name [org.springframework.context.support.ClassPathXmlApplicationContext@33d6f122]; startup date [Wed Mar 05 18:56:27 CST 2014]; root of context hierarchy
+[INFO ][2014-03-05 18:56:27] Loading XML bean definitions from class path resource [bean.xml]
+[INFO ][2014-03-05 18:56:27] Bean factory for application context [org.springframework.context.support.ClassPathXmlApplicationContext@33d6f122]: org.springframework.beans.factory.support.DefaultListableBeanFactory@1c20eb7
+[INFO ][2014-03-05 18:56:28] Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@1c20eb7: defining beans [org.springframework.context.annotation.internalPersistenceAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,XLoginServer,LoginCenter,LoginServerRmi,LoginServerRmiImpl,MainLoginServer,LoginManage,DbProxy,LoginEntityManage,LoginDataSource,LoginSessionFactory]; root of factory hierarchy
+[INFO ][2014-03-05 18:56:29] Looking for RMI registry at port '12004'
+[INFO ][2014-03-05 18:56:30] Could not detect RMI registry - creating new one
+[INFO ][2014-03-05 18:56:30] Binding service 'loginServerRmi' to RMI registry: RegistryImpl[UnicastServerRef [liveRef: [endpoint:[10.6.6.92:12004](local),objID:[0:0:0, 0]]]]
+[INFO ][2014-03-05 18:56:30] MLog clients using log4j logging.
+[INFO ][2014-03-05 18:56:30] Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+[INFO ][2014-03-05 18:56:30] Hibernate Annotations 3.2.1.GA
+[INFO ][2014-03-05 18:56:30] Hibernate 3.2.1
+[INFO ][2014-03-05 18:56:30] hibernate.properties not found
+[INFO ][2014-03-05 18:56:30] Bytecode provider name : cglib
+[INFO ][2014-03-05 18:56:30] using JDK 1.4 java.sql.Timestamp handling
+[INFO ][2014-03-05 18:56:30] Binding entity from annotated class: com.x.db.login.Account
+[INFO ][2014-03-05 18:56:30] Bind entity com.x.db.login.Account on table tb_account
+[INFO ][2014-03-05 18:56:30] Building new Hibernate SessionFactory
+[INFO ][2014-03-05 18:56:30] Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+[INFO ][2014-03-05 18:56:30] Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 1, acquireRetryAttempts -> 60, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 2s4eho9014h89xi1pt0j3e|6d352447, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 2s4eho9014h89xi1pt0j3e|6d352447, idleConnectionTestPeriod -> 0, initialPoolSize -> 2, jdbcUrl -> jdbc:mysql://10.6.6.92:3306/logindb?useUnicode=true&characterEncoding=UTF-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 60, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 10, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 1, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+[INFO ][2014-03-05 18:56:31] RDBMS: MySQL, version: 5.1.34-community
+[INFO ][2014-03-05 18:56:31] JDBC driver: MySQL-AB JDBC Driver, version: mysql-connector-java-5.0.8 ( Revision: ${svn.Revision} )
+[INFO ][2014-03-05 18:56:31] Using dialect: org.hibernate.dialect.MySQLDialect
+[INFO ][2014-03-05 18:56:31] Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+[INFO ][2014-03-05 18:56:31] No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+[INFO ][2014-03-05 18:56:31] Automatic flush during beforeCompletion(): disabled
+[INFO ][2014-03-05 18:56:31] Automatic session close at end of transaction: disabled
+[INFO ][2014-03-05 18:56:31] JDBC batch size: 15
+[INFO ][2014-03-05 18:56:31] JDBC batch updates for versioned data: disabled
+[INFO ][2014-03-05 18:56:31] Scrollable result sets: enabled
+[INFO ][2014-03-05 18:56:31] JDBC3 getGeneratedKeys(): enabled
+[INFO ][2014-03-05 18:56:31] Connection release mode: auto
+[INFO ][2014-03-05 18:56:31] Maximum outer join fetch depth: 2
+[INFO ][2014-03-05 18:56:31] Default batch fetch size: 1
+[INFO ][2014-03-05 18:56:31] Generate SQL with comments: disabled
+[INFO ][2014-03-05 18:56:31] Order SQL updates by primary key: disabled
+[INFO ][2014-03-05 18:56:31] Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+[INFO ][2014-03-05 18:56:31] Using ASTQueryTranslatorFactory
+[INFO ][2014-03-05 18:56:31] Query language substitutions: {}
+[INFO ][2014-03-05 18:56:31] JPA-QL strict compliance: disabled
+[INFO ][2014-03-05 18:56:31] Second-level cache: enabled
+[INFO ][2014-03-05 18:56:31] Query cache: disabled
+[INFO ][2014-03-05 18:56:31] Cache provider: org.hibernate.cache.NoCacheProvider
+[INFO ][2014-03-05 18:56:31] Optimize cache for minimal puts: disabled
+[INFO ][2014-03-05 18:56:31] Structured second-level cache entries: disabled
+[INFO ][2014-03-05 18:56:31] Statistics: disabled
+[INFO ][2014-03-05 18:56:31] Deleted entity synthetic identifier rollback: disabled
+[INFO ][2014-03-05 18:56:31] Default entity-mode: pojo
+[INFO ][2014-03-05 18:56:31] building session factory
+[INFO ][2014-03-05 18:56:31] Not binding factory to JNDI, no JNDI name configured
+[INFO ][2014-03-05 18:56:31] 登陆服务器socketserver已经启动，端口是 12005
+[INFO ][2014-03-05 18:56:31] ****服务器平台:1
+[INFO ][2014-03-05 18:56:31] 服务器已经已经启动:Wed Mar 05 18:56:31 CST 2014
+[INFO ][2014-03-05 18:57:16] 初始化spring容器
+[INFO ][2014-03-05 18:57:16] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@4102799c: display name [org.springframework.context.support.ClassPathXmlApplicationContext@4102799c]; startup date [Wed Mar 05 18:57:16 CST 2014]; root of context hierarchy
+[INFO ][2014-03-05 18:57:16] Loading XML bean definitions from class path resource [bean.xml]
+[INFO ][2014-03-05 18:57:17] Bean factory for application context [org.springframework.context.support.ClassPathXmlApplicationContext@4102799c]: org.springframework.beans.factory.support.DefaultListableBeanFactory@6b541147
+[INFO ][2014-03-05 18:57:17] Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@6b541147: defining beans [org.springframework.context.annotation.internalPersistenceAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,XLoginServer,LoginCenter,LoginServerRmi,LoginServerRmiImpl,MainLoginServer,LoginManage,DbProxy,LoginEntityManage,LoginDataSource,LoginSessionFactory]; root of factory hierarchy
+[INFO ][2014-03-05 18:57:18] Looking for RMI registry at port '12004'
+[INFO ][2014-03-05 18:57:19] Could not detect RMI registry - creating new one
+[INFO ][2014-03-05 18:57:19] Binding service 'loginServerRmi' to RMI registry: RegistryImpl[UnicastServerRef [liveRef: [endpoint:[10.6.6.92:12004](local),objID:[0:0:0, 0]]]]
+[INFO ][2014-03-05 18:57:19] MLog clients using log4j logging.
+[INFO ][2014-03-05 18:57:19] Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+[INFO ][2014-03-05 18:57:19] Hibernate Annotations 3.2.1.GA
+[INFO ][2014-03-05 18:57:19] Hibernate 3.2.1
+[INFO ][2014-03-05 18:57:19] hibernate.properties not found
+[INFO ][2014-03-05 18:57:19] Bytecode provider name : cglib
+[INFO ][2014-03-05 18:57:19] using JDK 1.4 java.sql.Timestamp handling
+[INFO ][2014-03-05 18:57:19] Binding entity from annotated class: com.x.db.login.Account
+[INFO ][2014-03-05 18:57:19] Bind entity com.x.db.login.Account on table tb_account
+[INFO ][2014-03-05 18:57:19] Building new Hibernate SessionFactory
+[INFO ][2014-03-05 18:57:19] Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+[INFO ][2014-03-05 18:57:19] Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 1, acquireRetryAttempts -> 60, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 2s4eho9014h9bslpcre3o|27b104d7, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 2s4eho9014h9bslpcre3o|27b104d7, idleConnectionTestPeriod -> 0, initialPoolSize -> 2, jdbcUrl -> jdbc:mysql://10.6.6.92:3306/logindb?useUnicode=true&characterEncoding=UTF-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 60, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 10, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 1, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+[INFO ][2014-03-05 18:57:20] RDBMS: MySQL, version: 5.1.34-community
+[INFO ][2014-03-05 18:57:20] JDBC driver: MySQL-AB JDBC Driver, version: mysql-connector-java-5.0.8 ( Revision: ${svn.Revision} )
+[INFO ][2014-03-05 18:57:20] Using dialect: org.hibernate.dialect.MySQLDialect
+[INFO ][2014-03-05 18:57:20] Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+[INFO ][2014-03-05 18:57:20] No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+[INFO ][2014-03-05 18:57:20] Automatic flush during beforeCompletion(): disabled
+[INFO ][2014-03-05 18:57:20] Automatic session close at end of transaction: disabled
+[INFO ][2014-03-05 18:57:20] JDBC batch size: 15
+[INFO ][2014-03-05 18:57:20] JDBC batch updates for versioned data: disabled
+[INFO ][2014-03-05 18:57:20] Scrollable result sets: enabled
+[INFO ][2014-03-05 18:57:20] JDBC3 getGeneratedKeys(): enabled
+[INFO ][2014-03-05 18:57:20] Connection release mode: auto
+[INFO ][2014-03-05 18:57:20] Maximum outer join fetch depth: 2
+[INFO ][2014-03-05 18:57:20] Default batch fetch size: 1
+[INFO ][2014-03-05 18:57:20] Generate SQL with comments: disabled
+[INFO ][2014-03-05 18:57:20] Order SQL updates by primary key: disabled
+[INFO ][2014-03-05 18:57:20] Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+[INFO ][2014-03-05 18:57:20] Using ASTQueryTranslatorFactory
+[INFO ][2014-03-05 18:57:20] Query language substitutions: {}
+[INFO ][2014-03-05 18:57:20] JPA-QL strict compliance: disabled
+[INFO ][2014-03-05 18:57:20] Second-level cache: enabled
+[INFO ][2014-03-05 18:57:20] Query cache: disabled
+[INFO ][2014-03-05 18:57:20] Cache provider: org.hibernate.cache.NoCacheProvider
+[INFO ][2014-03-05 18:57:20] Optimize cache for minimal puts: disabled
+[INFO ][2014-03-05 18:57:20] Structured second-level cache entries: disabled
+[INFO ][2014-03-05 18:57:20] Statistics: disabled
+[INFO ][2014-03-05 18:57:20] Deleted entity synthetic identifier rollback: disabled
+[INFO ][2014-03-05 18:57:20] Default entity-mode: pojo
+[INFO ][2014-03-05 18:57:20] building session factory
+[INFO ][2014-03-05 18:57:20] Not binding factory to JNDI, no JNDI name configured
+[INFO ][2014-03-05 18:57:20] 登陆服务器socketserver已经启动，端口是 12005
+[INFO ][2014-03-05 18:57:20] ****服务器平台:1
+[INFO ][2014-03-05 18:57:20] 服务器已经已经启动:Wed Mar 05 18:57:20 CST 2014
+[INFO ][2014-03-05 19:01:51] 初始化spring容器
+[INFO ][2014-03-05 19:01:51] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@4102799c: display name [org.springframework.context.support.ClassPathXmlApplicationContext@4102799c]; startup date [Wed Mar 05 19:01:51 CST 2014]; root of context hierarchy
+[INFO ][2014-03-05 19:01:51] Loading XML bean definitions from class path resource [bean.xml]
+[INFO ][2014-03-05 19:01:52] Bean factory for application context [org.springframework.context.support.ClassPathXmlApplicationContext@4102799c]: org.springframework.beans.factory.support.DefaultListableBeanFactory@6b541147
+[INFO ][2014-03-05 19:01:52] Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@6b541147: defining beans [org.springframework.context.annotation.internalPersistenceAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,XLoginServer,LoginCenter,LoginServerRmi,LoginServerRmiImpl,MainLoginServer,LoginManage,DbProxy,LoginEntityManage,LoginDataSource,LoginSessionFactory]; root of factory hierarchy
+[INFO ][2014-03-05 19:01:53] Looking for RMI registry at port '12004'
+[INFO ][2014-03-05 19:01:54] Could not detect RMI registry - creating new one
+[INFO ][2014-03-05 19:01:54] Binding service 'loginServerRmi' to RMI registry: RegistryImpl[UnicastServerRef [liveRef: [endpoint:[10.6.6.92:12004](local),objID:[0:0:0, 0]]]]
+[INFO ][2014-03-05 19:01:54] MLog clients using log4j logging.
+[INFO ][2014-03-05 19:01:54] Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+[INFO ][2014-03-05 19:01:54] Hibernate Annotations 3.2.1.GA
+[INFO ][2014-03-05 19:01:54] Hibernate 3.2.1
+[INFO ][2014-03-05 19:01:54] hibernate.properties not found
+[INFO ][2014-03-05 19:01:54] Bytecode provider name : cglib
+[INFO ][2014-03-05 19:01:54] using JDK 1.4 java.sql.Timestamp handling
+[INFO ][2014-03-05 19:01:54] Binding entity from annotated class: com.x.db.login.Account
+[INFO ][2014-03-05 19:01:54] Bind entity com.x.db.login.Account on table tb_account
+[INFO ][2014-03-05 19:01:54] Building new Hibernate SessionFactory
+[INFO ][2014-03-05 19:01:54] Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+[INFO ][2014-03-05 19:01:54] Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 1, acquireRetryAttempts -> 60, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 2s4eho9014hf7zetxffe8|3be0e954, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 2s4eho9014hf7zetxffe8|3be0e954, idleConnectionTestPeriod -> 0, initialPoolSize -> 2, jdbcUrl -> jdbc:mysql://10.6.6.92:3306/logindb?useUnicode=true&characterEncoding=UTF-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 60, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 10, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 1, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+[INFO ][2014-03-05 19:01:55] RDBMS: MySQL, version: 5.1.34-community
+[INFO ][2014-03-05 19:01:55] JDBC driver: MySQL-AB JDBC Driver, version: mysql-connector-java-5.0.8 ( Revision: ${svn.Revision} )
+[INFO ][2014-03-05 19:01:55] Using dialect: org.hibernate.dialect.MySQLDialect
+[INFO ][2014-03-05 19:01:55] Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+[INFO ][2014-03-05 19:01:55] No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+[INFO ][2014-03-05 19:01:55] Automatic flush during beforeCompletion(): disabled
+[INFO ][2014-03-05 19:01:55] Automatic session close at end of transaction: disabled
+[INFO ][2014-03-05 19:01:55] JDBC batch size: 15
+[INFO ][2014-03-05 19:01:55] JDBC batch updates for versioned data: disabled
+[INFO ][2014-03-05 19:01:55] Scrollable result sets: enabled
+[INFO ][2014-03-05 19:01:55] JDBC3 getGeneratedKeys(): enabled
+[INFO ][2014-03-05 19:01:55] Connection release mode: auto
+[INFO ][2014-03-05 19:01:55] Maximum outer join fetch depth: 2
+[INFO ][2014-03-05 19:01:55] Default batch fetch size: 1
+[INFO ][2014-03-05 19:01:55] Generate SQL with comments: disabled
+[INFO ][2014-03-05 19:01:55] Order SQL updates by primary key: disabled
+[INFO ][2014-03-05 19:01:55] Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+[INFO ][2014-03-05 19:01:55] Using ASTQueryTranslatorFactory
+[INFO ][2014-03-05 19:01:55] Query language substitutions: {}
+[INFO ][2014-03-05 19:01:55] JPA-QL strict compliance: disabled
+[INFO ][2014-03-05 19:01:55] Second-level cache: enabled
+[INFO ][2014-03-05 19:01:55] Query cache: disabled
+[INFO ][2014-03-05 19:01:55] Cache provider: org.hibernate.cache.NoCacheProvider
+[INFO ][2014-03-05 19:01:55] Optimize cache for minimal puts: disabled
+[INFO ][2014-03-05 19:01:55] Structured second-level cache entries: disabled
+[INFO ][2014-03-05 19:01:55] Statistics: disabled
+[INFO ][2014-03-05 19:01:55] Deleted entity synthetic identifier rollback: disabled
+[INFO ][2014-03-05 19:01:55] Default entity-mode: pojo
+[INFO ][2014-03-05 19:01:55] building session factory
+[INFO ][2014-03-05 19:01:55] Not binding factory to JNDI, no JNDI name configured
+[INFO ][2014-03-05 19:01:55] 登陆服务器socketserver已经启动，端口是 12005
+[INFO ][2014-03-05 19:01:55] ****服务器平台:1
+[INFO ][2014-03-05 19:01:55] 服务器已经已经启动:Wed Mar 05 19:01:55 CST 2014
+[INFO ][2014-03-05 19:02:00] --玩家断开连接:未产生任何操作,ip:/10.6.6.92:59846
+[INFO ][2014-03-05 19:04:51] 初始化spring容器
+[INFO ][2014-03-05 19:04:51] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5d3ad33d: display name [org.springframework.context.support.ClassPathXmlApplicationContext@5d3ad33d]; startup date [Wed Mar 05 19:04:51 CST 2014]; root of context hierarchy
+[INFO ][2014-03-05 19:04:51] Loading XML bean definitions from class path resource [bean.xml]
+[INFO ][2014-03-05 19:04:51] Bean factory for application context [org.springframework.context.support.ClassPathXmlApplicationContext@5d3ad33d]: org.springframework.beans.factory.support.DefaultListableBeanFactory@1c20eb7
+[INFO ][2014-03-05 19:04:51] Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@1c20eb7: defining beans [org.springframework.context.annotation.internalPersistenceAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,XLoginServer,LoginCenter,LoginServerRmi,LoginServerRmiImpl,MainLoginServer,LoginManage,DbProxy,LoginEntityManage,LoginDataSource,LoginSessionFactory]; root of factory hierarchy
+[INFO ][2014-03-05 19:04:52] Looking for RMI registry at port '12004'
+[INFO ][2014-03-05 19:04:53] Could not detect RMI registry - creating new one
+[INFO ][2014-03-05 19:04:53] Binding service 'loginServerRmi' to RMI registry: RegistryImpl[UnicastServerRef [liveRef: [endpoint:[10.6.6.92:12004](local),objID:[0:0:0, 0]]]]
+[INFO ][2014-03-05 19:04:53] MLog clients using log4j logging.
+[INFO ][2014-03-05 19:04:53] Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+[INFO ][2014-03-05 19:04:54] Hibernate Annotations 3.2.1.GA
+[INFO ][2014-03-05 19:04:54] Hibernate 3.2.1
+[INFO ][2014-03-05 19:04:54] hibernate.properties not found
+[INFO ][2014-03-05 19:04:54] Bytecode provider name : cglib
+[INFO ][2014-03-05 19:04:54] using JDK 1.4 java.sql.Timestamp handling
+[INFO ][2014-03-05 19:04:54] Binding entity from annotated class: com.x.db.login.Account
+[INFO ][2014-03-05 19:04:54] Bind entity com.x.db.login.Account on table tb_account
+[INFO ][2014-03-05 19:04:54] Building new Hibernate SessionFactory
+[INFO ][2014-03-05 19:04:54] Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+[INFO ][2014-03-05 19:04:54] Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 1, acquireRetryAttempts -> 60, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 2s4eho9014hj2cr1hap2q1|56b4d39c, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 2s4eho9014hj2cr1hap2q1|56b4d39c, idleConnectionTestPeriod -> 0, initialPoolSize -> 2, jdbcUrl -> jdbc:mysql://10.6.6.92:3306/logindb?useUnicode=true&characterEncoding=UTF-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 60, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 10, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 1, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+[INFO ][2014-03-05 19:04:54] RDBMS: MySQL, version: 5.1.34-community
+[INFO ][2014-03-05 19:04:54] JDBC driver: MySQL-AB JDBC Driver, version: mysql-connector-java-5.0.8 ( Revision: ${svn.Revision} )
+[INFO ][2014-03-05 19:04:54] Using dialect: org.hibernate.dialect.MySQLDialect
+[INFO ][2014-03-05 19:04:54] Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+[INFO ][2014-03-05 19:04:54] No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+[INFO ][2014-03-05 19:04:54] Automatic flush during beforeCompletion(): disabled
+[INFO ][2014-03-05 19:04:54] Automatic session close at end of transaction: disabled
+[INFO ][2014-03-05 19:04:54] JDBC batch size: 15
+[INFO ][2014-03-05 19:04:54] JDBC batch updates for versioned data: disabled
+[INFO ][2014-03-05 19:04:54] Scrollable result sets: enabled
+[INFO ][2014-03-05 19:04:54] JDBC3 getGeneratedKeys(): enabled
+[INFO ][2014-03-05 19:04:54] Connection release mode: auto
+[INFO ][2014-03-05 19:04:54] Maximum outer join fetch depth: 2
+[INFO ][2014-03-05 19:04:54] Default batch fetch size: 1
+[INFO ][2014-03-05 19:04:54] Generate SQL with comments: disabled
+[INFO ][2014-03-05 19:04:54] Order SQL updates by primary key: disabled
+[INFO ][2014-03-05 19:04:54] Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+[INFO ][2014-03-05 19:04:54] Using ASTQueryTranslatorFactory
+[INFO ][2014-03-05 19:04:54] Query language substitutions: {}
+[INFO ][2014-03-05 19:04:54] JPA-QL strict compliance: disabled
+[INFO ][2014-03-05 19:04:54] Second-level cache: enabled
+[INFO ][2014-03-05 19:04:54] Query cache: disabled
+[INFO ][2014-03-05 19:04:54] Cache provider: org.hibernate.cache.NoCacheProvider
+[INFO ][2014-03-05 19:04:54] Optimize cache for minimal puts: disabled
+[INFO ][2014-03-05 19:04:54] Structured second-level cache entries: disabled
+[INFO ][2014-03-05 19:04:54] Statistics: disabled
+[INFO ][2014-03-05 19:04:54] Deleted entity synthetic identifier rollback: disabled
+[INFO ][2014-03-05 19:04:54] Default entity-mode: pojo
+[INFO ][2014-03-05 19:04:54] building session factory
+[INFO ][2014-03-05 19:04:54] Not binding factory to JNDI, no JNDI name configured
+[INFO ][2014-03-05 19:04:54] 登陆服务器socketserver已经启动，端口是 12005
+[INFO ][2014-03-05 19:04:54] ****服务器平台:1
+[INFO ][2014-03-05 19:04:54] 服务器已经已经启动:Wed Mar 05 19:04:54 CST 2014
+[INFO ][2014-03-05 19:04:58] --玩家断开连接:未产生任何操作,ip:/10.6.6.92:59918
+[INFO ][2014-03-05 19:05:42] 初始化spring容器
+[INFO ][2014-03-05 19:05:42] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@ac44b88: display name [org.springframework.context.support.ClassPathXmlApplicationContext@ac44b88]; startup date [Wed Mar 05 19:05:42 CST 2014]; root of context hierarchy
+[INFO ][2014-03-05 19:05:42] Loading XML bean definitions from class path resource [bean.xml]
+[INFO ][2014-03-05 19:05:43] Bean factory for application context [org.springframework.context.support.ClassPathXmlApplicationContext@ac44b88]: org.springframework.beans.factory.support.DefaultListableBeanFactory@737c2891
+[INFO ][2014-03-05 19:05:43] Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@737c2891: defining beans [org.springframework.context.annotation.internalPersistenceAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,XLoginServer,LoginCenter,LoginServerRmi,LoginServerRmiImpl,MainLoginServer,LoginManage,DbProxy,LoginEntityManage,LoginDataSource,LoginSessionFactory]; root of factory hierarchy
+[INFO ][2014-03-05 19:05:44] Looking for RMI registry at port '12004'
+[INFO ][2014-03-05 19:05:45] Could not detect RMI registry - creating new one
+[INFO ][2014-03-05 19:05:45] Binding service 'loginServerRmi' to RMI registry: RegistryImpl[UnicastServerRef [liveRef: [endpoint:[10.6.6.92:12004](local),objID:[0:0:0, 0]]]]
+[INFO ][2014-03-05 19:05:45] MLog clients using log4j logging.
+[INFO ][2014-03-05 19:05:45] Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+[INFO ][2014-03-05 19:05:45] Hibernate Annotations 3.2.1.GA
+[INFO ][2014-03-05 19:05:45] Hibernate 3.2.1
+[INFO ][2014-03-05 19:05:45] hibernate.properties not found
+[INFO ][2014-03-05 19:05:45] Bytecode provider name : cglib
+[INFO ][2014-03-05 19:05:45] using JDK 1.4 java.sql.Timestamp handling
+[INFO ][2014-03-05 19:05:45] Binding entity from annotated class: com.x.db.login.Account
+[INFO ][2014-03-05 19:05:45] Bind entity com.x.db.login.Account on table tb_account
+[INFO ][2014-03-05 19:05:45] Building new Hibernate SessionFactory
+[INFO ][2014-03-05 19:05:46] Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+[INFO ][2014-03-05 19:05:46] Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 1, acquireRetryAttempts -> 60, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 2s4eho9014hk69ziushph|3be0e954, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 2s4eho9014hk69ziushph|3be0e954, idleConnectionTestPeriod -> 0, initialPoolSize -> 2, jdbcUrl -> jdbc:mysql://10.6.6.92:3306/logindb?useUnicode=true&characterEncoding=UTF-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 60, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 10, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 1, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+[INFO ][2014-03-05 19:05:46] RDBMS: MySQL, version: 5.1.34-community
+[INFO ][2014-03-05 19:05:46] JDBC driver: MySQL-AB JDBC Driver, version: mysql-connector-java-5.0.8 ( Revision: ${svn.Revision} )
+[INFO ][2014-03-05 19:05:46] Using dialect: org.hibernate.dialect.MySQLDialect
+[INFO ][2014-03-05 19:05:46] Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+[INFO ][2014-03-05 19:05:46] No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+[INFO ][2014-03-05 19:05:46] Automatic flush during beforeCompletion(): disabled
+[INFO ][2014-03-05 19:05:46] Automatic session close at end of transaction: disabled
+[INFO ][2014-03-05 19:05:46] JDBC batch size: 15
+[INFO ][2014-03-05 19:05:46] JDBC batch updates for versioned data: disabled
+[INFO ][2014-03-05 19:05:46] Scrollable result sets: enabled
+[INFO ][2014-03-05 19:05:46] JDBC3 getGeneratedKeys(): enabled
+[INFO ][2014-03-05 19:05:46] Connection release mode: auto
+[INFO ][2014-03-05 19:05:46] Maximum outer join fetch depth: 2
+[INFO ][2014-03-05 19:05:46] Default batch fetch size: 1
+[INFO ][2014-03-05 19:05:46] Generate SQL with comments: disabled
+[INFO ][2014-03-05 19:05:46] Order SQL updates by primary key: disabled
+[INFO ][2014-03-05 19:05:46] Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+[INFO ][2014-03-05 19:05:46] Using ASTQueryTranslatorFactory
+[INFO ][2014-03-05 19:05:46] Query language substitutions: {}
+[INFO ][2014-03-05 19:05:46] JPA-QL strict compliance: disabled
+[INFO ][2014-03-05 19:05:46] Second-level cache: enabled
+[INFO ][2014-03-05 19:05:46] Query cache: disabled
+[INFO ][2014-03-05 19:05:46] Cache provider: org.hibernate.cache.NoCacheProvider
+[INFO ][2014-03-05 19:05:46] Optimize cache for minimal puts: disabled
+[INFO ][2014-03-05 19:05:46] Structured second-level cache entries: disabled
+[INFO ][2014-03-05 19:05:46] Statistics: disabled
+[INFO ][2014-03-05 19:05:46] Deleted entity synthetic identifier rollback: disabled
+[INFO ][2014-03-05 19:05:46] Default entity-mode: pojo
+[INFO ][2014-03-05 19:05:46] building session factory
+[INFO ][2014-03-05 19:05:46] Not binding factory to JNDI, no JNDI name configured
+[INFO ][2014-03-05 19:05:46] 登陆服务器socketserver已经启动，端口是 12005
+[INFO ][2014-03-05 19:05:46] ****服务器平台:1
+[INFO ][2014-03-05 19:05:46] 服务器已经已经启动:Wed Mar 05 19:05:46 CST 2014
+[INFO ][2014-03-05 19:05:50] --玩家断开连接:未产生任何操作,ip:/10.6.6.92:59960
+[INFO ][2014-03-06 10:22:50] 初始化spring容器
+[INFO ][2014-03-06 10:22:50] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5d3ad33d: display name [org.springframework.context.support.ClassPathXmlApplicationContext@5d3ad33d]; startup date [Thu Mar 06 10:22:50 CST 2014]; root of context hierarchy
+[INFO ][2014-03-06 10:22:50] Loading XML bean definitions from class path resource [bean.xml]
+[INFO ][2014-03-06 10:22:51] Bean factory for application context [org.springframework.context.support.ClassPathXmlApplicationContext@5d3ad33d]: org.springframework.beans.factory.support.DefaultListableBeanFactory@1c20eb7
+[INFO ][2014-03-06 10:22:51] Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@1c20eb7: defining beans [org.springframework.context.annotation.internalPersistenceAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,XLoginServer,LoginCenter,LoginServerRmi,LoginServerRmiImpl,MainLoginServer,LoginManage,DbProxy,LoginEntityManage,LoginDataSource,LoginSessionFactory]; root of factory hierarchy
+[INFO ][2014-03-06 10:22:52] Looking for RMI registry at port '12004'
+[INFO ][2014-03-06 10:22:53] Could not detect RMI registry - creating new one
+[INFO ][2014-03-06 10:22:53] Binding service 'loginServerRmi' to RMI registry: RegistryImpl[UnicastServerRef [liveRef: [endpoint:[10.6.6.92:12004](local),objID:[0:0:0, 0]]]]
+[INFO ][2014-03-06 10:22:53] MLog clients using log4j logging.
+[INFO ][2014-03-06 10:22:54] Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+[INFO ][2014-03-06 10:22:54] Hibernate Annotations 3.2.1.GA
+[INFO ][2014-03-06 10:22:54] Hibernate 3.2.1
+[INFO ][2014-03-06 10:22:54] hibernate.properties not found
+[INFO ][2014-03-06 10:22:54] Bytecode provider name : cglib
+[INFO ][2014-03-06 10:22:54] using JDK 1.4 java.sql.Timestamp handling
+[INFO ][2014-03-06 10:22:54] Binding entity from annotated class: com.x.db.login.Account
+[INFO ][2014-03-06 10:22:54] Bind entity com.x.db.login.Account on table tb_account
+[INFO ][2014-03-06 10:22:54] Building new Hibernate SessionFactory
+[INFO ][2014-03-06 10:22:54] Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+[INFO ][2014-03-06 10:22:54] Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 1, acquireRetryAttempts -> 60, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 2s4eho9015ebmel10n4yfi|3be0e954, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 2s4eho9015ebmel10n4yfi|3be0e954, idleConnectionTestPeriod -> 0, initialPoolSize -> 2, jdbcUrl -> jdbc:mysql://10.6.6.92:3306/logindb?useUnicode=true&characterEncoding=UTF-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 60, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 10, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 1, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+[INFO ][2014-03-06 10:22:54] RDBMS: MySQL, version: 5.1.34-community
+[INFO ][2014-03-06 10:22:54] JDBC driver: MySQL-AB JDBC Driver, version: mysql-connector-java-5.0.8 ( Revision: ${svn.Revision} )
+[INFO ][2014-03-06 10:22:54] Using dialect: org.hibernate.dialect.MySQLDialect
+[INFO ][2014-03-06 10:22:54] Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+[INFO ][2014-03-06 10:22:54] No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+[INFO ][2014-03-06 10:22:54] Automatic flush during beforeCompletion(): disabled
+[INFO ][2014-03-06 10:22:54] Automatic session close at end of transaction: disabled
+[INFO ][2014-03-06 10:22:54] JDBC batch size: 15
+[INFO ][2014-03-06 10:22:54] JDBC batch updates for versioned data: disabled
+[INFO ][2014-03-06 10:22:54] Scrollable result sets: enabled
+[INFO ][2014-03-06 10:22:54] JDBC3 getGeneratedKeys(): enabled
+[INFO ][2014-03-06 10:22:54] Connection release mode: auto
+[INFO ][2014-03-06 10:22:54] Maximum outer join fetch depth: 2
+[INFO ][2014-03-06 10:22:54] Default batch fetch size: 1
+[INFO ][2014-03-06 10:22:54] Generate SQL with comments: disabled
+[INFO ][2014-03-06 10:22:54] Order SQL updates by primary key: disabled
+[INFO ][2014-03-06 10:22:54] Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+[INFO ][2014-03-06 10:22:54] Using ASTQueryTranslatorFactory
+[INFO ][2014-03-06 10:22:54] Query language substitutions: {}
+[INFO ][2014-03-06 10:22:54] JPA-QL strict compliance: disabled
+[INFO ][2014-03-06 10:22:54] Second-level cache: enabled
+[INFO ][2014-03-06 10:22:54] Query cache: disabled
+[INFO ][2014-03-06 10:22:54] Cache provider: org.hibernate.cache.NoCacheProvider
+[INFO ][2014-03-06 10:22:54] Optimize cache for minimal puts: disabled
+[INFO ][2014-03-06 10:22:54] Structured second-level cache entries: disabled
+[INFO ][2014-03-06 10:22:54] Statistics: disabled
+[INFO ][2014-03-06 10:22:54] Deleted entity synthetic identifier rollback: disabled
+[INFO ][2014-03-06 10:22:54] Default entity-mode: pojo
+[INFO ][2014-03-06 10:22:54] building session factory
+[INFO ][2014-03-06 10:22:54] Not binding factory to JNDI, no JNDI name configured
+[INFO ][2014-03-06 10:22:55] 登陆服务器socketserver已经启动，端口是 12005
+[INFO ][2014-03-06 10:22:55] ****服务器平台:1
+[INFO ][2014-03-06 10:22:55] 服务器已经已经启动:Thu Mar 06 10:22:55 CST 2014
+[INFO ][2014-03-06 10:23:14] --玩家断开连接:未产生任何操作,ip:/10.6.6.92:51177
+[INFO ][2014-03-06 10:24:30] --玩家断开连接:未产生任何操作,ip:/10.6.6.92:51186
+[INFO ][2014-03-06 10:24:55] --玩家断开连接:未产生任何操作,ip:/10.6.6.92:51187
+[INFO ][2014-03-06 10:26:09] --玩家断开连接:未产生任何操作,ip:/10.6.6.92:51200
+[INFO ][2014-03-06 10:26:33] --玩家断开连接:未产生任何操作,ip:/10.6.6.92:51204
+[INFO ][2014-03-06 10:26:51] --玩家断开连接:未产生任何操作,ip:/10.6.6.92:51207
+[INFO ][2014-03-06 10:27:37] --玩家断开连接:未产生任何操作,ip:/10.6.6.92:51213
+[INFO ][2014-03-06 10:29:45] --玩家断开连接:未产生任何操作,ip:/10.6.6.92:51242
+[INFO ][2014-03-06 10:31:24] --玩家断开连接:未产生任何操作,ip:/10.6.6.92:51260

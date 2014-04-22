@@ -25,7 +25,14 @@ public class LoginServerHandler extends SimpleChannelUpstreamHandler{
 	
 	public void messageReceived(ChannelHandlerContext ctx, MessageEvent e)
 			throws Exception {
-		ChannelBuffer buf = (ChannelBuffer)e.getMessage();
+//		ChannelBuffer buf = (ChannelBuffer)e.getMessage();
+		
+		BaseMessage bm = (BaseMessage)e.getMessage();
+		LoginMessage loginMessage = new LoginMessage(bm);
+		System.out.println("命令码: " + loginMessage.getCommand());
+		
+		ctx.getChannel().write(bm);
+		
 		@SuppressWarnings("unchecked")
 		HashMap<String,Object> context = (HashMap<String,Object>)ctx.getAttachment();
 		if(context == null){
@@ -34,24 +41,24 @@ public class LoginServerHandler extends SimpleChannelUpstreamHandler{
 			ctx.setAttachment(context);
 		}
 		
-		if(buf.hasArray()){
-			byte[] gets = buf.array();
-			int msglen = ((gets[0] & 0xFF) << 8) + (gets[1] & 0xFF);
-			byte[] msg = gets;
-			System.arraycopy(gets, 2, msg, 0, msglen-2);
-			BaseMessage bm = (BaseMessage)BaseMessage.parseFrom(msg);
-			LoginMessage loginMessage = new LoginMessage(bm);
-			System.out.println("命令码: " + loginMessage.getCommand());
-			int len = 0;
-			len = msglen;
-			byte[] send = new byte[len];
-			send[0] = (byte)((msglen & 0xFF) >> 8);
-			send[1] = (byte)(msglen & 0xFF);
-			System.arraycopy(gets, 0, send, 2, msglen-2);
-			ChannelBuffer cb = ChannelBuffers.buffer(send.length);
-			cb.writeBytes(send);
-			ctx.getChannel().write(cb);
-		}
+//		if(buf.hasArray()){
+//			byte[] gets = buf.array();
+//			int msglen = ((gets[0] & 0xFF) << 8) + (gets[1] & 0xFF);
+//			byte[] msg = gets;
+//			System.arraycopy(gets, 2, msg, 0, msglen-2);
+//			BaseMessage bm = (BaseMessage)BaseMessage.parseFrom(msg);
+//			LoginMessage loginMessage = new LoginMessage(bm);
+//			System.out.println("命令码: " + loginMessage.getCommand());
+//			int len = 0;
+//			len = msglen;
+//			byte[] send = new byte[len];
+//			send[0] = (byte)((msglen & 0xFF) >> 8);
+//			send[1] = (byte)(msglen & 0xFF);
+//			System.arraycopy(gets, 0, send, 2, msglen-2);
+//			ChannelBuffer cb = ChannelBuffers.buffer(send.length);
+//			cb.writeBytes(send);
+//			ctx.getChannel().write(cb);
+//		}
 		
 //		try {
 //			if(bm != null){
